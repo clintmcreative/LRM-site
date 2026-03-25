@@ -32,7 +32,9 @@ export default function HomePage() {
 
         <CTASection
           variant="primary"
-          heading="Give your child something to look forward to each month."
+          heading="The perfect gift for a child in your life."
+          subheading="6-month and yearly subscription options available for holidays and birthdays."
+          buttonText="Gift a Subscription"
         />
 
         <WhatsInsideSection />
