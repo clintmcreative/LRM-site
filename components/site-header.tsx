@@ -40,7 +40,7 @@ export function SiteHeader() {
             href="/#choose-plan"
             className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Subscribe Now
+            Join the Club
           </Link>
         </nav>
 
@@ -86,7 +86,7 @@ export function SiteHeader() {
               className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Subscribe Now
+              Join the Club
             </Link>
           </div>
         </nav>

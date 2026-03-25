@@ -36,6 +36,9 @@ export function HeroSection() {
             >
               Join the Club
             </Link>
+            <p className="mt-3 text-sm text-primary-foreground/70">
+              Ships monthly. Cancel anytime.
+            </p>
           </div>
         </div>
       </div>
@@ -109,12 +112,12 @@ export function ProblemStatementSection() {
                 Most kids{"'"} entertainment today is noisy, disposable, or digital.
               </p>
               <p>Another show watched.</p>
-              <p>Another afternoon slips by.</p>
+              <p>Another afternoon gone.</p>
               <p>
-                We all desire something better for our kids. Something slower, more meaningful, and <strong><em>real</em></strong>.
+                We want something better for our kids. Something slower, more meaningful, and real.
               </p>
               <p>
-                Little Red Mailbox turns a simple moment into something special: a story to read, a mission to try, and a letter waiting in the mailbox with their name on it.
+                Little Red Mailbox turns a simple moment into something special — a story to read, a mission to try, and something waiting in the mailbox.
               </p>
             </div>
           </div>
@@ -269,7 +272,7 @@ export function WhatsInsideSection() {
                   <Gift className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-bold text-foreground">A Small Surprise</h3>
+                  <h3 className="font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                     A small, meaningful token tucked inside each envelope that brings the adventure to life.
                   </p>
@@ -306,7 +309,7 @@ export function BenefitsSection() {
               </div>
               <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Screen-Free Engagement</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Give your child something they can hold in their hands. Real paper, real stories, real adventures.
+                Give your child something they can hold in their hands. Real paper, real stories, real adventures. No batteries. No logins. No noise.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-8 text-center">
@@ -315,7 +318,7 @@ export function BenefitsSection() {
               </div>
               <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Character Development</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Each letter reinforces values like grit, responsibility, patience, and gratitude through story and mission.
+                Each letter reinforces values like grit, responsibility, patience, and gratitude through story and mission. Built through story, not lectures.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-8 text-center sm:col-span-2 lg:col-span-1">
@@ -324,7 +327,7 @@ export function BenefitsSection() {
               </div>
               <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Family Connection</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Missions are designed to be done together. The letters become shared memories and meaningful conversations.
+                Missions are designed to be done together. The letters become shared memories and meaningful conversations. Simple moments that actually happen.
               </p>
             </div>
           </div>
@@ -364,18 +367,18 @@ export function HowItWorksSection() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <span className="font-serif text-2xl font-bold">2</span>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Watch the Mailbox</h3>
+              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Check the Mailbox</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Each month a story and mission arrive.
+                A new story and mission arrives each month.
               </p>
             </div>
             <div className="text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <span className="font-serif text-2xl font-bold">3</span>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Read the Story. Try the Mission.</h3>
+              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Read. Explore. Do.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Kids explore the adventure and complete a hands-on challenge.
+                Kids read the story and try the hands-on mission.
               </p>
             </div>
           </div>
@@ -463,27 +466,22 @@ function CheckIcon() {
 
 export function PlanSelectionSection() {
   const monthlyFeatures = [
-    "Original adventure story each month",
+    "Original story each month",
     "Hands-on mission or activity",
-    "A small surprise inside every envelope",
-    "Designed for children ages 7–10",
-    "Cancel anytime, no commitment",
+    "Cancel anytime",
   ]
 
   const yearlyFeatures = [
-    "Original adventure story each month",
-    "Hands-on mission or activity",
-    "A small surprise inside every envelope",
-    "Designed for children ages 7–10",
-    "One payment for the full year",
+    "Everything in monthly",
+    "One simple payment for the year",
+    "Best value for families",
+    "Our most popular option",
   ]
 
   const giftFeatures = [
-    "Original adventure story each month",
-    "Hands-on mission or activity",
-    "A small surprise inside every envelope",
-    "Designed for children ages 7–10",
-    "Great for birthdays, holidays, or grandparents",
+    "Ships monthly to recipient",
+    "No renewal required",
+    "Perfect for birthdays and holidays",
   ]
 
   return (
@@ -503,13 +501,13 @@ export function PlanSelectionSection() {
         <SectionObserver>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Monthly Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background">
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  Monthly
                 </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Monthly adventure subscription
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Welcome to the Club.
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
@@ -518,7 +516,6 @@ export function PlanSelectionSection() {
                     <span className="font-serif text-4xl font-bold text-foreground">$10.99</span>
                     <span className="text-base text-muted-foreground">/ month</span>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Cancel anytime. Ships monthly.</p>
                 </div>
 
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
@@ -540,41 +537,44 @@ export function PlanSelectionSection() {
             </div>
 
             {/* Yearly Plan - Best Value */}
-            <div className="relative flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background">
-              <div className="absolute top-4 right-4">
-                <span className="rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold text-accent">
-                  Best Value
-                </span>
-              </div>
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-primary-foreground">
+                  Yearly
                 </h3>
                 <p className="mt-1 text-sm text-primary-foreground/80">
-                  Yearly subscription
+                  Our Best Value
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
                 <div className="text-center">
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-foreground">$119</span>
-                    <span className="text-base text-muted-foreground">/ year</span>
+                    <span className="font-serif text-4xl font-bold text-primary-foreground">$119</span>
+                    <span className="text-base text-primary-foreground/80">/ year</span>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Save compared to monthly. Ships monthly.</p>
                 </div>
 
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
                   {yearlyFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckIcon />
-                      <span className="text-sm text-foreground">{item}</span>
+                      <svg
+                        className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2.5}
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm text-primary-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href={YEARLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
                   Join Yearly
                 </a>
@@ -582,21 +582,17 @@ export function PlanSelectionSection() {
             </div>
 
             {/* Gift Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background md:col-span-2 lg:col-span-1">
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background md:col-span-2 lg:col-span-1">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  Gift
                 </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Give as a gift
+                <p className="mt-1 text-sm text-muted-foreground">
+                  A thoughtful gift that arrives each month.
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
-                <p className="text-center text-sm text-muted-foreground">
-                  A thoughtful screen-free gift that arrives by mail each month.
-                </p>
-
-                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                <ul className="flex flex-1 flex-col gap-3">
                   {giftFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckIcon />
@@ -610,11 +606,11 @@ export function PlanSelectionSection() {
                     href={GIFT_6_MONTH_LINK}
                     className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                   >
-                    6 Month Gift — $64.99
+                    6 Month Gift — $65
                   </a>
                   <a
                     href={GIFT_YEARLY_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg border-2 border-primary bg-transparent px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Yearly Gift — $119
                   </a>
