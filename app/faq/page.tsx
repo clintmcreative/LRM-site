@@ -109,7 +109,7 @@ export default function FAQPage() {
                   href="/#choose-plan"
                   className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
-                  Subscribe Now
+                  Join the Club
                 </Link>
                 <Link
                   href="/free-letter"

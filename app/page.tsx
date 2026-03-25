@@ -32,8 +32,8 @@ export default function HomePage() {
 
         <CTASection
           variant="primary"
-          heading="Give a gift that doesn&apos;t get tossed aside."
-          subheading="Available as 6-month or yearly subscriptions. Perfect for birthdays, holidays, or grandparents looking to give something meaningful."
+          heading="A Gift They&apos;ll Actually Look Forward To"
+          subheading="Something that shows up every month — not something forgotten after a day."
           buttonText="Gift a Subscription"
         />
 
