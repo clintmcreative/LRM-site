@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Can this be given as a gift?",
     answer:
-      "Absolutely! Little Red Mailbox makes a wonderful gift for birthdays, holidays, or just because. During checkout, you can enter a different shipping address for the recipient. We can also include a personalized note with the first letter. Gift subscriptions are available for 3, 6, or 12 months.",
+      "Absolutely! Little Red Mailbox makes a wonderful gift for birthdays, holidays, or just because. During checkout, you can enter a different shipping address for the recipient. Gift subscriptions are available for 6 months or a full year.",
   },
   {
     question: "How often do letters arrive?",
@@ -106,7 +106,7 @@ export default function FAQPage() {
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
-                  href="/#pricing"
+                  href="/#choose-plan"
                   className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
                   Subscribe Now

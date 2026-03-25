@@ -44,7 +44,7 @@ export default function FreeLetterPage() {
                 Get the Free Sample Letter
               </a>
               <a
-                href="/#pricing"
+                href="/#choose-plan"
                 className="inline-flex items-center rounded-lg border border-border bg-card px-8 py-4 text-base font-semibold text-foreground transition-colors hover:bg-muted"
               >
                 Join the Club
