@@ -4,12 +4,14 @@ interface CTASectionProps {
   variant?: "primary" | "secondary"
   heading?: string
   subheading?: string
+  buttonText?: string
 }
 
 export function CTASection({
   variant = "primary",
   heading,
   subheading,
+  buttonText = "Join the Club",
 }: CTASectionProps) {
   if (variant === "secondary") {
     return (
@@ -30,7 +32,7 @@ export function CTASection({
               href="#pricing"
               className="inline-flex items-center rounded-lg bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Join the Club
+              {buttonText}
             </Link>
           </div>
         </div>
@@ -56,7 +58,7 @@ export function CTASection({
             href="#pricing"
             className="inline-flex items-center rounded-lg bg-primary-foreground px-7 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
           >
-            Join the Club
+            {buttonText}
           </Link>
         </div>
       </div>
