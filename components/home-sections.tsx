@@ -466,7 +466,7 @@ function CheckIcon() {
 
 export function PlanSelectionSection() {
   const monthlyFeatures = [
-    "Original adventure story each month",
+    "Original story each month",
     "Hands-on mission or activity",
     "Cancel anytime",
   ]
@@ -475,6 +475,7 @@ export function PlanSelectionSection() {
     "Everything in monthly",
     "One simple payment for the year",
     "Best value for families",
+    "Our most popular option",
   ]
 
   const giftFeatures = [
@@ -500,13 +501,13 @@ export function PlanSelectionSection() {
         <SectionObserver>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Monthly Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background">
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  Monthly
                 </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Monthly adventure subscription
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Welcome to the Club.
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
@@ -515,7 +516,6 @@ export function PlanSelectionSection() {
                     <span className="font-serif text-4xl font-bold text-foreground">$10.99</span>
                     <span className="text-base text-muted-foreground">/ month</span>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Cancel anytime. Ships monthly.</p>
                 </div>
 
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
@@ -537,44 +537,44 @@ export function PlanSelectionSection() {
             </div>
 
             {/* Yearly Plan - Best Value */}
-            <div className="relative flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary/5">
-              <div className="absolute top-4 right-4">
-                <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
-                  Best Value
-                </span>
-              </div>
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-primary-foreground">
+                  Yearly
                 </h3>
                 <p className="mt-1 text-sm text-primary-foreground/80">
-                  Yearly subscription
-                </p>
-                <p className="mt-1 text-xs font-medium text-primary-foreground/70">
-                  Most families choose this
+                  Our Best Value
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
                 <div className="text-center">
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-foreground">$119</span>
-                    <span className="text-base text-muted-foreground">/ year</span>
+                    <span className="font-serif text-4xl font-bold text-primary-foreground">$119</span>
+                    <span className="text-base text-primary-foreground/80">/ year</span>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Save compared to monthly. Ships monthly.</p>
                 </div>
 
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
                   {yearlyFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckIcon />
-                      <span className="text-sm text-foreground">{item}</span>
+                      <svg
+                        className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2.5}
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm text-primary-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href={YEARLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
                   Join Yearly
                 </a>
@@ -582,17 +582,17 @@ export function PlanSelectionSection() {
             </div>
 
             {/* Gift Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background md:col-span-2 lg:col-span-1">
-              <div className="bg-primary px-6 py-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-primary-foreground">
-                  Little Red Mailbox
+            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background md:col-span-2 lg:col-span-1">
+              <div className="px-6 py-6 text-center">
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  Gift
                 </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Give as a gift
+                <p className="mt-1 text-sm text-muted-foreground">
+                  A thoughtful gift that arrives each month.
                 </p>
               </div>
               <div className="flex flex-1 flex-col px-6 py-6">
-                <ul className="mt-2 flex flex-1 flex-col gap-3">
+                <ul className="flex flex-1 flex-col gap-3">
                   {giftFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckIcon />
@@ -606,11 +606,11 @@ export function PlanSelectionSection() {
                     href={GIFT_6_MONTH_LINK}
                     className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                   >
-                    6 Month Gift — $64.99
+                    6 Month Gift — $65
                   </a>
                   <a
                     href={GIFT_YEARLY_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg border-2 border-primary bg-transparent px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Yearly Gift — $119
                   </a>
