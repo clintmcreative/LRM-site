@@ -9,7 +9,7 @@ import {
   WhatsInsideSection,
   BenefitsSection,
   FinalCTASection,
-  PricingSection,
+  PlanSelectionSection,
 } from "@/components/home-sections"
 
 export default function HomePage() {
@@ -49,7 +49,7 @@ export default function HomePage() {
 
         <FinalCTASection />
 
-        <PricingSection />
+        <PlanSelectionSection />
       </main>
       <SiteFooter />
     </>

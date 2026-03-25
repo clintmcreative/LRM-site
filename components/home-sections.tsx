@@ -31,7 +31,7 @@ export function HeroSection() {
           </p>
           <div className="mt-8">
             <Link
-              href="#pricing"
+              href="#choose-plan"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Join the Club
@@ -421,7 +421,7 @@ export function FinalCTASection() {
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="#pricing"
+                href="#choose-plan"
                 className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
               >
                 Join the Club
@@ -440,25 +440,71 @@ export function FinalCTASection() {
   )
 }
 
-export function PricingSection() {
+// Placeholder links - replace with actual Stripe links
+const MONTHLY_STRIPE_LINK = "#"
+const YEARLY_STRIPE_LINK = "#"
+const GIFT_6_MONTH_LINK = "#"
+const GIFT_YEARLY_LINK = "#"
+
+function CheckIcon() {
   return (
-    <section id="pricing" className="bg-card py-16 md:py-24">
+    <svg
+      className="mt-0.5 h-5 w-5 shrink-0 text-accent"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
+
+export function PlanSelectionSection() {
+  const monthlyFeatures = [
+    "Original adventure story each month",
+    "Hands-on mission or activity",
+    "A small surprise inside every envelope",
+    "Designed for children ages 7–10",
+    "Cancel anytime, no commitment",
+  ]
+
+  const yearlyFeatures = [
+    "Original adventure story each month",
+    "Hands-on mission or activity",
+    "A small surprise inside every envelope",
+    "Designed for children ages 7–10",
+    "One payment for the full year",
+  ]
+
+  const giftFeatures = [
+    "Original adventure story each month",
+    "Hands-on mission or activity",
+    "A small surprise inside every envelope",
+    "Designed for children ages 7–10",
+    "Great for birthdays, holidays, or grandparents",
+  ]
+
+  return (
+    <section id="choose-plan" className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Simple Pricing
-            </span>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl">
-              One plan. One price. Stories worth opening.
+            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+              Choose Your Subscription
             </h2>
+            <p className="mt-4 text-base text-muted-foreground">
+              Select the option that fits your family best.
+            </p>
           </div>
         </SectionObserver>
 
         <SectionObserver>
-          <div className="mx-auto mt-12 max-w-md">
-            <div className="overflow-hidden rounded-xl border-2 border-primary bg-background">
-              <div className="bg-primary px-8 py-6 text-center">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Monthly Plan */}
+            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background">
+              <div className="bg-primary px-6 py-6 text-center">
                 <h3 className="font-serif text-xl font-bold text-primary-foreground">
                   Little Red Mailbox
                 </h3>
@@ -466,46 +512,113 @@ export function PricingSection() {
                   Monthly adventure subscription
                 </p>
               </div>
-              <div className="px-8 py-8 text-center">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="font-serif text-5xl font-bold text-foreground">$10.99</span>
-                  <span className="text-base text-muted-foreground">/month</span>
+              <div className="flex flex-1 flex-col px-6 py-6">
+                <div className="text-center">
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="font-serif text-4xl font-bold text-foreground">$10.99</span>
+                    <span className="text-base text-muted-foreground">/ month</span>
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">Cancel anytime. Ships monthly.</p>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">Cancel anytime. Ships monthly.</p>
 
-                <ul className="mt-8 flex flex-col gap-3 text-left">
-                  {[
-                    "Original adventure story each month",
-                    "Hands-on mission or activity",
-                    "A small surprise inside every envelope",
-                    "Addressed personally to your child",
-                    "Cancel anytime, no commitment",
-                  ].map((item) => (
+                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                  {monthlyFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <svg
-                        className="mt-0.5 h-5 w-5 shrink-0 text-accent"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2.5}
-                        aria-hidden="true"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
+                      <CheckIcon />
                       <span className="text-sm text-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link
-                  href="#"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                <a
+                  href={MONTHLY_STRIPE_LINK}
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
-                  Join the Club
-                </Link>
-                <p className="mt-3 text-xs text-muted-foreground">
-                  Secure checkout. Cancel anytime.
+                  Join Monthly
+                </a>
+              </div>
+            </div>
+
+            {/* Yearly Plan - Best Value */}
+            <div className="relative flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background">
+              <div className="absolute top-4 right-4">
+                <span className="rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold text-accent">
+                  Best Value
+                </span>
+              </div>
+              <div className="bg-primary px-6 py-6 text-center">
+                <h3 className="font-serif text-xl font-bold text-primary-foreground">
+                  Little Red Mailbox
+                </h3>
+                <p className="mt-1 text-sm text-primary-foreground/80">
+                  Yearly subscription
                 </p>
+              </div>
+              <div className="flex flex-1 flex-col px-6 py-6">
+                <div className="text-center">
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="font-serif text-4xl font-bold text-foreground">$119</span>
+                    <span className="text-base text-muted-foreground">/ year</span>
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">Save compared to monthly. Ships monthly.</p>
+                </div>
+
+                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                  {yearlyFeatures.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckIcon />
+                      <span className="text-sm text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={YEARLY_STRIPE_LINK}
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Join Yearly
+                </a>
+              </div>
+            </div>
+
+            {/* Gift Plan */}
+            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-background md:col-span-2 lg:col-span-1">
+              <div className="bg-primary px-6 py-6 text-center">
+                <h3 className="font-serif text-xl font-bold text-primary-foreground">
+                  Little Red Mailbox
+                </h3>
+                <p className="mt-1 text-sm text-primary-foreground/80">
+                  Give as a gift
+                </p>
+              </div>
+              <div className="flex flex-1 flex-col px-6 py-6">
+                <p className="text-center text-sm text-muted-foreground">
+                  A thoughtful screen-free gift that arrives by mail each month.
+                </p>
+
+                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                  {giftFeatures.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckIcon />
+                      <span className="text-sm text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-col gap-3">
+                  <a
+                    href={GIFT_6_MONTH_LINK}
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    6 Month Gift — $64.99
+                  </a>
+                  <a
+                    href={GIFT_YEARLY_LINK}
+                    className="inline-flex w-full items-center justify-center rounded-lg border-2 border-primary bg-transparent px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
+                  >
+                    Yearly Gift — $119
+                  </a>
+                </div>
               </div>
             </div>
           </div>
