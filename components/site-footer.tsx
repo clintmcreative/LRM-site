@@ -49,7 +49,7 @@ export function SiteFooter() {
                 Questions
               </Link>
               <a
-                href="mailto:hello@littleredmailbox.com"
+                href="mailto:hello@littleredmailboxclub.com"
                 className="text-sm text-foreground transition-colors hover:text-primary"
               >
                 Contact

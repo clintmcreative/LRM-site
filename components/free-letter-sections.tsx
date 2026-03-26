@@ -2,12 +2,21 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { SectionObserver } from "@/components/section-observer"
+
+function scrollToPricing(router: ReturnType<typeof useRouter>) {
+  return (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push("/#pricing")
+  }
+}
 
 
 export function FreeLetterHero() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const router = useRouter()
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -78,12 +87,12 @@ export function FreeLetterHero() {
             <p className="text-sm text-primary-foreground/80">
               Kids love getting mail. Ready to start?
             </p>
-            <a
-              href="/#pricing"
+            <button
+              onClick={scrollToPricing(router)}
               className="mt-3 inline-flex items-center rounded-lg border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
             >
-              Join the Club
-            </a>
+              Start My Subscription
+            </button>
           </div>
         </div>
       </div>
@@ -92,6 +101,8 @@ export function FreeLetterHero() {
 }
 
 export function WhatYoullGet() {
+  const router = useRouter()
+
   return (
     <section className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -124,16 +135,16 @@ export function WhatYoullGet() {
               </a>
             </div>
             <div className="flex flex-col rounded-lg border border-border bg-background p-8 text-center">
-              <h3 className="font-serif text-lg font-bold text-foreground">Monthly Mailbox Delivery</h3>
+              <h3 className="font-serif text-lg font-bold text-foreground">Skip the Preview — Start My Subscription</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                Members receive a printed story and hands-on mission delivered to their mailbox each month.
+                Get your first story delivered to your mailbox and begin the adventure right away.
               </p>
-              <a
-                href="/#pricing"
+              <button
+                onClick={scrollToPricing(router)}
                 className="mt-6 inline-flex items-center justify-center rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
               >
-                Join the Club
-              </a>
+                Start My Subscription
+              </button>
             </div>
           </div>
         </SectionObserver>
@@ -143,6 +154,8 @@ export function WhatYoullGet() {
 }
 
 export function WhyFamiliesLoveIt() {
+  const router = useRouter()
+
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -194,12 +207,12 @@ export function WhyFamiliesLoveIt() {
                 >
                   Get the Free Letter
                 </a>
-                <a
-                  href="/#pricing"
+                <button
+                  onClick={scrollToPricing(router)}
                   className="inline-flex items-center rounded-lg border-2 border-primary bg-transparent px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
                 >
-                  Join the Club
-                </a>
+                  Start My Subscription
+                </button>
               </div>
             </div>
           </div>

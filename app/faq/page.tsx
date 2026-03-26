@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { FAQAccordion } from "@/components/faq-accordion"
 import { SectionObserver } from "@/components/section-observer"
+import { FAQFinalCTA } from "@/components/faq-final-cta"
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Little Red Mailbox",
@@ -15,7 +16,7 @@ const faqs = [
   {
     question: "When do letters ship?",
     answer:
-      "Letters ship on the first week of every month. Once your subscription is active, your child's first letter will go out with the next monthly batch. Most families receive their letter within 5-7 business days of shipping, depending on location.",
+      "Letters ship during the first week of each month. Once your subscription is active, your child's first letter will go out with the next monthly batch. Most families receive their letter within 5–7 business days after shipping, depending on location.",
   },
   {
     question: "What age is this for?",
@@ -35,12 +36,12 @@ const faqs = [
   {
     question: "How do I cancel?",
     answer:
-      "You can cancel your subscription at any time with no questions asked. Simply log into your account or send us an email at hello@littleredmailbox.com. There are no cancellation fees and no long-term commitments.",
+      "cancel_special",
   },
   {
     question: "Can this be given as a gift?",
     answer:
-      "Absolutely! Little Red Mailbox makes a wonderful gift for birthdays, holidays, or just because. During checkout, you can enter a different shipping address for the recipient. Gift subscriptions are available for 6 months or a full year.",
+      "gift_special",
   },
   {
     question: "How often do letters arrive?",
@@ -76,10 +77,10 @@ export default function FAQPage() {
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               Everything you need to know about Little Red Mailbox. Can{"'"}t find what you{"'"}re looking for? Reach out to us at{" "}
               <a
-                href="mailto:hello@littleredmailbox.com"
+                href="mailto:hello@littleredmailboxclub.com"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
-                hello@littleredmailbox.com
+                hello@littleredmailboxclub.com
               </a>
             </p>
           </div>
@@ -95,32 +96,7 @@ export default function FAQPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-primary py-16 md:py-20">
-          <div className="mx-auto max-w-2xl px-6 text-center">
-            <SectionObserver>
-              <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl text-balance">
-                Ready to start the adventure?
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-primary-foreground/80 md:text-lg">
-                Give your child something to look forward to. Real mail, real stories, real character.
-              </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Link
-                  href="/#pricing"
-                  className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
-                >
-                  Join the Club
-                </Link>
-                <Link
-                  href="/free-letter"
-                  className="inline-flex items-center rounded-lg border border-primary-foreground/30 px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-                >
-                  Read the First Letter Free
-                </Link>
-              </div>
-            </SectionObserver>
-          </div>
-        </section>
+        <FAQFinalCTA />
       </main>
       <SiteFooter />
     </>
