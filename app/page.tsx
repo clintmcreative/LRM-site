@@ -24,7 +24,7 @@ export default function HomePage() {
         <TransformationSection />
 
         <CTASection
-          variant="secondary"
+          variant="primary"
           heading="Ready to trade screen time for story time?"
         />
 
