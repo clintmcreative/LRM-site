@@ -29,7 +29,7 @@ export function CTASection({
           )}
           <div className="mt-2">
             <Link
-              href="#choose-plan"
+              href="#pricing"
               className="inline-flex items-center rounded-lg bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               {buttonText}
@@ -55,7 +55,7 @@ export function CTASection({
         )}
         <div className="mt-2">
           <Link
-            href="#choose-plan"
+            href="#pricing"
             className="inline-flex items-center rounded-lg bg-primary-foreground px-7 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
           >
             {buttonText}

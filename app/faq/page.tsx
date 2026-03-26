@@ -106,7 +106,7 @@ export default function FAQPage() {
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
-                  href="/#choose-plan"
+                  href="/#pricing"
                   className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
                   Join the Club

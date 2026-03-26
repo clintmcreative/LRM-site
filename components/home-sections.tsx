@@ -31,7 +31,7 @@ export function HeroSection() {
           </p>
           <div className="mt-8">
             <Link
-              href="#choose-plan"
+              href="#pricing"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Join the Club
@@ -55,7 +55,7 @@ export function ProblemStatementSection() {
             <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
               Childhood Shouldn{"'"}t Happen on a Screen
             </h2>
-            
+
             {/* Screen to Envelope icon transition */}
             <div className="mt-6 flex items-center justify-center gap-4">
               {/* Screen/tablet icon */}
@@ -72,7 +72,7 @@ export function ProblemStatementSection() {
                 <line x1="6" y1="30" x2="34" y2="30" className="stroke-primary" />
                 <circle cx="20" cy="34" r="1.5" className="fill-primary stroke-primary" />
               </svg>
-              
+
               {/* Arrow */}
               <svg
                 viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ export function ProblemStatementSection() {
                 <line x1="4" y1="12" x2="20" y2="12" className="stroke-primary" />
                 <polyline points="14,6 20,12 14,18" className="stroke-primary" />
               </svg>
-              
+
               {/* Envelope icon */}
               <svg
                 viewBox="0 0 40 40"
@@ -106,7 +106,7 @@ export function ProblemStatementSection() {
                 <path d="M36 32 L26 22" className="stroke-primary" />
               </svg>
             </div>
-            
+
             <div className="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
               <p>
                 Most kids{"'"} entertainment today is noisy, disposable, or digital.
@@ -424,7 +424,7 @@ export function FinalCTASection() {
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="#choose-plan"
+                href="#pricing"
                 className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
               >
                 Join the Club
@@ -443,11 +443,11 @@ export function FinalCTASection() {
   )
 }
 
-// Placeholder links - replace with actual Stripe links
-const MONTHLY_STRIPE_LINK = "#"
-const YEARLY_STRIPE_LINK = "#"
-const GIFT_6_MONTH_LINK = "#"
-const GIFT_YEARLY_LINK = "#"
+// Stripe checkout links
+const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00"
+const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01"
+const GIFT_6_MONTH_LINK = "https://buy.stripe.com/8x228r0pQ5324wgcMZfIs02"
+const GIFT_YEARLY_LINK = "https://buy.stripe.com/4gM00jb4ugLKbYI9ANfIs03"
 
 function CheckIcon() {
   return (
@@ -485,7 +485,7 @@ export function PlanSelectionSection() {
   ]
 
   return (
-    <section id="choose-plan" className="bg-card py-16 md:py-24">
+    <section id="pricing" className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
@@ -619,7 +619,7 @@ export function PlanSelectionSection() {
             </div>
           </div>
         </SectionObserver>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }
