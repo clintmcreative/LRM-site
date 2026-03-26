@@ -30,7 +30,7 @@ export function FreeLetterCTA() {
             onClick={scrollToPricing}
             className="inline-flex items-center rounded-lg border border-border bg-card px-8 py-4 text-base font-semibold text-foreground transition-colors hover:bg-muted"
           >
-            Join the Club
+            Start My Subscription
           </button>
         </div>
       </div>

@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "When do letters ship?",
     answer:
-      "Letters ship on the first week of every month. Once your subscription is active, your child's first letter will go out with the next monthly batch. Most families receive their letter within 5-7 business days of shipping, depending on location.",
+      "Letters ship during the first week of each month. Once your subscription is active, your child's first letter will go out with the next monthly batch. Most families receive their letter within 5–7 business days after shipping, depending on location.",
   },
   {
     question: "What age is this for?",
@@ -36,12 +36,12 @@ const faqs = [
   {
     question: "How do I cancel?",
     answer:
-      "You can cancel your subscription at any time with no questions asked. Simply log into your account or send us an email at hello@littleredmailbox.com. There are no cancellation fees and no long-term commitments.",
+      "cancel_special",
   },
   {
     question: "Can this be given as a gift?",
     answer:
-      "Absolutely! Little Red Mailbox makes a wonderful gift for birthdays, holidays, or just because. During checkout, you can enter a different shipping address for the recipient. Gift subscriptions are available for 6 months or a full year.",
+      "gift_special",
   },
   {
     question: "How often do letters arrive?",
@@ -77,10 +77,10 @@ export default function FAQPage() {
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               Everything you need to know about Little Red Mailbox. Can{"'"}t find what you{"'"}re looking for? Reach out to us at{" "}
               <a
-                href="mailto:hello@littleredmailbox.com"
+                href="mailto:hello@littleredmailboxclub.com"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
-                hello@littleredmailbox.com
+                hello@littleredmailboxclub.com
               </a>
             </p>
           </div>
