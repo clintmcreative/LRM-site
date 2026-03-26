@@ -31,7 +31,7 @@ export function HeroSection() {
           </p>
           <div className="mt-8">
             <Link
-              href="#choose-plan"
+              href="#pricing"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Join the Club
@@ -424,7 +424,7 @@ export function FinalCTASection() {
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="#choose-plan"
+                href="#pricing"
                 className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
               >
                 Join the Club
@@ -443,11 +443,11 @@ export function FinalCTASection() {
   )
 }
 
-// Placeholder links - replace with actual Stripe links
-const MONTHLY_STRIPE_LINK = "#"
-const YEARLY_STRIPE_LINK = "#"
-const GIFT_6_MONTH_LINK = "#"
-const GIFT_YEARLY_LINK = "#"
+// Stripe checkout links
+const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00"
+const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01"
+const GIFT_6_MONTH_LINK = "https://buy.stripe.com/8x228r0pQ5324wgcMZfIs02"
+const GIFT_YEARLY_LINK = "https://buy.stripe.com/4gM00jb4ugLKbYI9ANfIs03"
 
 function CheckIcon() {
   return (
@@ -485,7 +485,7 @@ export function PlanSelectionSection() {
   ]
 
   return (
-    <section id="choose-plan" className="bg-card py-16 md:py-24">
+    <section id="pricing" className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
