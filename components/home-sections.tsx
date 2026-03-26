@@ -57,6 +57,7 @@ export function ProblemStatementSection() {
   return (
     <section className="bg-background py-16 md:py-20">
       <div className="mx-auto max-w-3xl px-6">
+        <div className="rounded-xl border border-border bg-card p-8 md:p-12 shadow-sm">
         <SectionObserver>
           <div className="text-center">
             <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
@@ -129,6 +130,7 @@ export function ProblemStatementSection() {
             </div>
           </div>
         </SectionObserver>
+        </div>
       </div>
     </section>
   )
@@ -173,7 +175,7 @@ export function FarmMindsetSection() {
 
 export function TransformationSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="bg-secondary/50 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
