@@ -2,10 +2,22 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter, usePathname } from "next/navigation"
 import { Mail, Menu, X } from "lucide-react"
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const scrollToPricing = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (pathname === "/") {
+      document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      router.push("/#pricing")
+    }
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -36,12 +48,12 @@ export function SiteHeader() {
           >
             FAQ
           </Link>
-          <Link
-            href="/#pricing"
+          <button
+            onClick={scrollToPricing}
             className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Join the Club
-          </Link>
+          </button>
         </nav>
 
         <button
@@ -81,13 +93,15 @@ export function SiteHeader() {
             >
               FAQ
             </Link>
-            <Link
-              href="/#pricing"
+            <button
+              onClick={(e) => {
+                setMobileMenuOpen(false)
+                scrollToPricing(e)
+              }}
               className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
-              onClick={() => setMobileMenuOpen(false)}
             >
               Join the Club
-            </Link>
+            </button>
           </div>
         </nav>
       )}

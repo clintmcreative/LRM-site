@@ -1,10 +1,15 @@
-import Link from "next/link"
+"use client"
 
 interface CTASectionProps {
   variant?: "primary" | "secondary"
   heading?: string
   subheading?: string
   buttonText?: string
+}
+
+function scrollToPricing(e: React.MouseEvent) {
+  e.preventDefault()
+  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" })
 }
 
 export function CTASection({
@@ -28,12 +33,12 @@ export function CTASection({
             </p>
           )}
           <div className="mt-2">
-            <Link
-              href="#pricing"
+            <button
+              onClick={scrollToPricing}
               className="inline-flex items-center rounded-lg bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               {buttonText}
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -54,12 +59,12 @@ export function CTASection({
           </p>
         )}
         <div className="mt-2">
-          <Link
-            href="#pricing"
+          <button
+            onClick={scrollToPricing}
             className="inline-flex items-center rounded-lg bg-primary-foreground px-7 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
           >
             {buttonText}
-          </Link>
+          </button>
         </div>
       </div>
     </section>

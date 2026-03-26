@@ -1,7 +1,14 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { SectionObserver } from "@/components/section-observer"
 import { BookOpen, Compass, Gift, Heart, Leaf, TreePine } from "lucide-react"
+
+function scrollToPricing(e: React.MouseEvent) {
+  e.preventDefault()
+  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" })
+}
 
 export function HeroSection() {
   return (
@@ -30,12 +37,12 @@ export function HeroSection() {
             Because kids still love getting mail.
           </p>
           <div className="mt-8">
-            <Link
-              href="#pricing"
+            <button
+              onClick={scrollToPricing}
               className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Join the Club
-            </Link>
+            </button>
             <p className="mt-3 text-sm text-primary-foreground/70">
               Ships monthly. Cancel anytime.
             </p>
@@ -423,12 +430,12 @@ export function FinalCTASection() {
               </p>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="#pricing"
+              <button
+                onClick={scrollToPricing}
                 className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
               >
                 Join the Club
-              </Link>
+              </button>
               <Link
                 href="/free-letter"
                 className="inline-flex items-center rounded-lg border border-primary-foreground/30 px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
@@ -485,7 +492,7 @@ export function PlanSelectionSection() {
   ]
 
   return (
-    <section id="pricing" className="bg-card py-16 md:py-24">
+    <section id="pricing" className="scroll-mt-20 bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
