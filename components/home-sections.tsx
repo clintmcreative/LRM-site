@@ -55,7 +55,7 @@ export function ProblemStatementSection() {
             <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
               Childhood Shouldn{"'"}t Happen on a Screen
             </h2>
-            
+
             {/* Screen to Envelope icon transition */}
             <div className="mt-6 flex items-center justify-center gap-4">
               {/* Screen/tablet icon */}
@@ -72,7 +72,7 @@ export function ProblemStatementSection() {
                 <line x1="6" y1="30" x2="34" y2="30" className="stroke-primary" />
                 <circle cx="20" cy="34" r="1.5" className="fill-primary stroke-primary" />
               </svg>
-              
+
               {/* Arrow */}
               <svg
                 viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ export function ProblemStatementSection() {
                 <line x1="4" y1="12" x2="20" y2="12" className="stroke-primary" />
                 <polyline points="14,6 20,12 14,18" className="stroke-primary" />
               </svg>
-              
+
               {/* Envelope icon */}
               <svg
                 viewBox="0 0 40 40"
@@ -106,7 +106,7 @@ export function ProblemStatementSection() {
                 <path d="M36 32 L26 22" className="stroke-primary" />
               </svg>
             </div>
-            
+
             <div className="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
               <p>
                 Most kids{"'"} entertainment today is noisy, disposable, or digital.
@@ -528,98 +528,98 @@ export function PlanSelectionSection() {
                 </ul>
 
                 <a
-                  href={MONTHLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  href={https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00}
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
-                  Join Monthly
-                </a>
-              </div>
+                Join Monthly
+              </a>
             </div>
+          </div>
 
-            {/* Yearly Plan - Best Value */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary">
-              <div className="px-6 py-6 text-center">
-                <h3 className="font-serif text-2xl font-bold text-primary-foreground">
-                  Yearly
-                </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Our Best Value
-                </p>
-              </div>
-              <div className="flex flex-1 flex-col px-6 py-6">
-                <div className="text-center">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-primary-foreground">$119</span>
-                    <span className="text-base text-primary-foreground/80">/ year</span>
-                  </div>
+          {/* Yearly Plan - Best Value */}
+          <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary">
+            <div className="px-6 py-6 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground">
+                Yearly
+              </h3>
+              <p className="mt-1 text-sm text-primary-foreground/80">
+                Our Best Value
+              </p>
+            </div>
+            <div className="flex flex-1 flex-col px-6 py-6">
+              <div className="text-center">
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="font-serif text-4xl font-bold text-primary-foreground">$119</span>
+                  <span className="text-base text-primary-foreground/80">/ year</span>
                 </div>
+              </div>
 
-                <ul className="mt-6 flex flex-1 flex-col gap-3">
-                  {yearlyFeatures.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg
-                        className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2.5}
-                        aria-hidden="true"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm text-primary-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="mt-6 flex flex-1 flex-col gap-3">
+                {yearlyFeatures.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm text-primary-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
+              <a
+                href={YEARLY_STRIPE_LINK}
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+              >
+                Join Yearly
+              </a>
+            </div>
+          </div>
+
+          {/* Gift Plan */}
+          <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background md:col-span-2 lg:col-span-1">
+            <div className="px-6 py-6 text-center">
+              <h3 className="font-serif text-2xl font-bold text-foreground">
+                Gift
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                A thoughtful gift that arrives each month.
+              </p>
+            </div>
+            <div className="flex flex-1 flex-col px-6 py-6">
+              <ul className="flex flex-1 flex-col gap-3">
+                {giftFeatures.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckIcon />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex flex-col gap-3">
                 <a
-                  href={YEARLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+                  href={GIFT_6_MONTH_LINK}
+                  className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
-                  Join Yearly
+                  6 Month Gift — $65
                 </a>
-              </div>
-            </div>
-
-            {/* Gift Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background md:col-span-2 lg:col-span-1">
-              <div className="px-6 py-6 text-center">
-                <h3 className="font-serif text-2xl font-bold text-foreground">
-                  Gift
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  A thoughtful gift that arrives each month.
-                </p>
-              </div>
-              <div className="flex flex-1 flex-col px-6 py-6">
-                <ul className="flex flex-1 flex-col gap-3">
-                  {giftFeatures.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckIcon />
-                      <span className="text-sm text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-6 flex flex-col gap-3">
-                  <a
-                    href={GIFT_6_MONTH_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                  >
-                    6 Month Gift — $65
-                  </a>
-                  <a
-                    href={GIFT_YEARLY_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                  >
-                    Yearly Gift — $119
-                  </a>
-                </div>
+                <a
+                  href={GIFT_YEARLY_LINK}
+                  className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Yearly Gift — $119
+                </a>
               </div>
             </div>
           </div>
-        </SectionObserver>
       </div>
-    </section>
+    </SectionObserver>
+      </div >
+    </section >
   )
 }
