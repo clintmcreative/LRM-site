@@ -217,7 +217,7 @@ export function TransformationSection() {
                 </li>
               </ul>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                This is simple, screen-free adventure designed to help kids grow steady, curious, and capable.
+                This is simple, screen-free adventure designed to help kids grow steady, curious, and capable. Rooted in farm life, the outdoors, and simple, meaningful work.
               </p>
             </div>
           </div>
@@ -419,16 +419,13 @@ export function FinalCTASection() {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
               <p>
-                Little Red Mailbox is about more than a story arriving in the mail. It{"'"}s about giving kids something meaningful in a world full of noise.
+                Each month brings a story rooted in real life, inspired by farm work, the outdoors, and the kind of challenges that shape capable kids.
               </p>
               <p>
-                Each month brings a story to read, a mission to try, and a small moment of curiosity waiting in the mailbox.
+                Kids do not just read these stories. They step into them, trying, building, exploring, and growing along the way.
               </p>
               <p>
-                Along the way, kids quietly grow in the values that shape capable lives — patience, responsibility, resourcefulness, and gratitude — not through lectures, but through stories and experiences they explore for themselves.
-              </p>
-              <p>
-                Because childhood doesn{"'"}t need more noise. It needs more moments that matter.
+                Because childhood does not need more noise. It needs more moments that matter.
               </p>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

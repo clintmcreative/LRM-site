@@ -45,7 +45,7 @@ export function FreeLetterHero() {
             Start the Adventure Free
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-            Download the first Little Red Mailbox story and see how the adventure begins.
+            Read the first Little Red Mailbox story and get a feel for the kind of real life, grounded stories we send each month.
           </p>
 
           {!submitted ? (
