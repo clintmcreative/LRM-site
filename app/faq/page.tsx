@@ -24,9 +24,9 @@ const faqs = [
       "Little Red Mailbox is designed for children ages 7 to 10. The stories and missions are written to be engaging and challenging enough for this age range while still being warm and accessible. Some younger or older children enjoy them too, but the sweet spot is right in that 7-10 window.",
   },
   {
-    question: "Is this religious?",
+    question: "What are the stories about?",
     answer:
-      "Little Red Mailbox is not affiliated with any specific religion. Our stories and missions focus on universal character traits like responsibility, grit, patience, resourcefulness, gratitude, and stewardship. These are values that families of all backgrounds can appreciate.",
+      "Little Red Mailbox stories are rooted in simple, real-life experiences that shape capable kids. Each month follows characters who work, explore, build, and solve problems — often inspired by farm life, the outdoors, and small-town living. They're not fast-paced or fantasy-driven. They're grounded stories that reward effort, curiosity, and responsibility. You don't have to live on a farm to raise a kid with a farmer's mindset.",
   },
   {
     question: "What comes inside each envelope?",
