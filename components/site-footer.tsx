@@ -43,16 +43,28 @@ export function SiteFooter() {
                 Support
               </span>
               <Link
-                href="/faq"
+                href="/terms"
                 className="text-sm text-foreground transition-colors hover:text-primary"
               >
-                Questions
+                Terms of Service
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-sm text-foreground transition-colors hover:text-primary"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/refund"
+                className="text-sm text-foreground transition-colors hover:text-primary"
+              >
+                Refund Policy
               </Link>
               <a
                 href="mailto:hello@littleredmailboxclub.com"
                 className="text-sm text-foreground transition-colors hover:text-primary"
               >
-                Contact
+                Contact Us
               </a>
             </div>
           </nav>
