@@ -61,8 +61,11 @@ export function ProblemStatementSection() {
         <SectionObserver>
           <div className="text-center">
             <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
-              Childhood Shouldn{"'"}t Happen on a Screen
+              Childhood is happening on a screen.
             </h2>
+            <p className="mt-2 font-serif text-xl italic text-muted-foreground md:text-2xl">
+              It doesn{"'"}t have to.
+            </p>
 
             {/* Screen to Envelope icon transition */}
             <div className="mt-6 flex items-center justify-center gap-4">
@@ -117,15 +120,13 @@ export function ProblemStatementSection() {
 
             <div className="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
               <p>
-                Most kids{"'"} entertainment today is noisy, disposable, or digital.
-              </p>
-              <p>Another show watched.</p>
-              <p>Another afternoon gone.</p>
-              <p>
-                We want something better for our kids. Something slower, more meaningful, and real.
+                The average 7-year-old spends more than 4 hours a day looking at a glowing rectangle. Another show. Another scroll. Another afternoon gone.
               </p>
               <p>
-                Little Red Mailbox turns a simple moment into something special — a story to read, a mission to try, and something waiting in the mailbox.
+                You don{"'"}t want to lecture them off the iPad. You want to replace it with something better. Something slower, more meaningful, and real.
+              </p>
+              <p>
+                That{"'"}s the whole idea behind Little Red Mailbox: a small piece of magic that arrives in your mailbox once a month, with your child{"'"}s name on it.
               </p>
             </div>
           </div>
