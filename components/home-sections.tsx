@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { SectionObserver } from "@/components/section-observer"
-import { BookOpen, Compass, Gift, Heart, Leaf, TreePine } from "lucide-react"
+import { BookOpen, Compass, Gift, Heart, Sun, TreePine } from "lucide-react"
 
 function scrollToPricing(e: React.MouseEvent) {
   e.preventDefault()
@@ -31,7 +31,7 @@ export function HeroSection() {
             A Screen-Free Monthly Adventure Your Kids Will Look Forward To
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-            Each month, we send a story and small adventure to your mailbox — inviting kids ages 7–10 to explore, imagine, and try something new.
+            Every month, we mail your child an original story, a hands-on mission, and a small surprise — addressed personally to them. Real paper. Real adventure. Zero screens.
           </p>
           <p className="mt-4 text-lg font-bold text-primary-foreground md:text-xl">
             Because kids still love getting mail.
@@ -61,8 +61,11 @@ export function ProblemStatementSection() {
         <SectionObserver>
           <div className="text-center">
             <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
-              Childhood Shouldn{"'"}t Happen on a Screen
+              Childhood is happening on a screen.
             </h2>
+            <p className="mt-2 font-serif text-xl italic text-muted-foreground md:text-2xl">
+              It doesn{"'"}t have to.
+            </p>
 
             {/* Screen to Envelope icon transition */}
             <div className="mt-6 flex items-center justify-center gap-4">
@@ -117,15 +120,13 @@ export function ProblemStatementSection() {
 
             <div className="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
               <p>
-                Most kids{"'"} entertainment today is noisy, disposable, or digital.
-              </p>
-              <p>Another show watched.</p>
-              <p>Another afternoon gone.</p>
-              <p>
-                We want something better for our kids. Something slower, more meaningful, and real.
+                The average 7-year-old spends more than 4 hours a day looking at a glowing rectangle. Another show. Another scroll. Another afternoon gone.
               </p>
               <p>
-                Little Red Mailbox turns a simple moment into something special — a story to read, a mission to try, and something waiting in the mailbox.
+                You don{"'"}t want to lecture them off the iPad. You want to replace it with something better. Something slower, more meaningful, and real.
+              </p>
+              <p>
+                That{"'"}s the whole idea behind Little Red Mailbox: a small piece of magic that arrives in your mailbox once a month, with your child{"'"}s name on it.
               </p>
             </div>
           </div>
@@ -314,9 +315,9 @@ export function BenefitsSection() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border border-border bg-card p-8 text-center">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                <Leaf className="h-7 w-7 text-primary" />
+                <Sun className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Screen-Free Engagement</h3>
+              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Off the screen, into the world.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Give your child something they can hold in their hands. Real paper, real stories, real adventures. No batteries. No logins. No noise.
               </p>
@@ -325,7 +326,7 @@ export function BenefitsSection() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                 <TreePine className="h-7 w-7 text-accent" />
               </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Character Development</h3>
+              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Raise {"'"}em Up.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Each letter reinforces values like grit, responsibility, patience, and gratitude through story and mission. Built through story, not lectures.
               </p>
@@ -334,7 +335,7 @@ export function BenefitsSection() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
                 <Heart className="h-7 w-7 text-secondary-foreground" />
               </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Family Connection</h3>
+              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Conversations you{"'"}ve been missing.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Missions are designed to be done together. The letters become shared memories and meaningful conversations. Simple moments that actually happen.
               </p>
