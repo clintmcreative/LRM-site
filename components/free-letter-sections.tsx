@@ -1,9 +1,21 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { SectionObserver } from "@/components/section-observer"
+
+declare global {
+  interface Window {
+    ml?: (action: string, formId: string, show: boolean) => void
+  }
+}
+
+function openMailerLitePopup(e: React.MouseEvent) {
+  e.preventDefault()
+  if (typeof window !== "undefined" && window.ml) {
+    window.ml("show", "gwYLVS", true)
+  }
+}
 
 function scrollToPricing(router: ReturnType<typeof useRouter>) {
   return (e: React.MouseEvent) => {
@@ -14,16 +26,7 @@ function scrollToPricing(router: ReturnType<typeof useRouter>) {
 
 
 export function FreeLetterHero() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
   const router = useRouter()
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (email.trim()) {
-      setSubmitted(true)
-    }
-  }
 
   return (
     <section id="top" className="relative flex min-h-[85vh] items-center overflow-hidden pt-20">
@@ -48,40 +51,14 @@ export function FreeLetterHero() {
             Read the first Little Red Mailbox story and get a feel for the kind of real life, grounded stories we send each month.
           </p>
 
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <label htmlFor="email-capture" className="sr-only">
-                Your email address
-              </label>
-              <input
-                id="email-capture"
-                type="email"
-                required
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-4 text-base text-primary-foreground placeholder:text-primary-foreground/50 backdrop-blur-sm focus:border-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary-foreground/20"
-              />
-              <button
-                type="submit"
-                className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                Get the Free Letter
-              </button>
-            </form>
-          ) : (
-            <div className="mt-8 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-6 py-5 backdrop-blur-sm">
-              <p className="font-serif text-lg font-bold text-primary-foreground">
-                Check your inbox!
-              </p>
-              <p className="mt-1 text-sm text-primary-foreground/80">
-                Your free Little Red Mailbox letter is on its way. Keep an eye out for an email from us.
-              </p>
-            </div>
-          )}
-          <p className="mt-3 text-xs text-primary-foreground/60">
-            Get your free sample letter delivered to your email inbox.
-          </p>
+          <div className="mt-8">
+            <button
+              onClick={openMailerLitePopup}
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Get the Free Letter
+            </button>
+          </div>
 
           <div className="mt-8 border-t border-primary-foreground/15 pt-6">
             <p className="text-sm text-primary-foreground/80">
@@ -127,12 +104,12 @@ export function WhatYoullGet() {
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                 Your sample story arrives instantly in your inbox so you can preview the kind of adventure kids receive.
               </p>
-              <a
-                href="#top"
+              <button
+                onClick={openMailerLitePopup}
                 className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Get the Free Sample Letter
-              </a>
+              </button>
             </div>
             <div className="flex flex-col rounded-lg border border-border bg-background p-8 text-center">
               <h3 className="font-serif text-lg font-bold text-foreground">Skip the Preview — Start My Subscription</h3>
@@ -201,12 +178,12 @@ export function WhyFamiliesLoveIt() {
               
               {/* CTA Buttons */}
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start">
-                <a
-                  href="#top"
+                <button
+                  onClick={openMailerLitePopup}
                   className="inline-flex items-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   Get the Free Letter
-                </a>
+                </button>
                 <button
                   onClick={scrollToPricing(router)}
                   className="inline-flex items-center rounded-lg border-2 border-primary bg-transparent px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
