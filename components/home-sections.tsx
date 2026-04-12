@@ -438,6 +438,10 @@ export function FinalCTASection() {
               </button>
               <Link
                 href="/free-letter"
+                onClick={(e) => {
+                  e.preventDefault()
+                  window.ml && window.ml("show", "gwYLVS", true)
+                }}
                 className="inline-flex items-center rounded-lg border border-primary-foreground/30 px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 Read the First Letter Free
