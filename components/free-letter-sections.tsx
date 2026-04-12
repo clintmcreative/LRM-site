@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { SectionObserver } from "@/components/section-observer"
@@ -14,40 +13,7 @@ function scrollToPricing(router: ReturnType<typeof useRouter>) {
 
 
 export function FreeLetterHero() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!email.trim()) return
-
-    setIsSubmitting(true)
-
-    try {
-      // Submit to our API route which forwards to MailerLite
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      if (response.ok) {
-        setSubmitted(true)
-      } else {
-        // Even on error, show success - email may have gone through
-        setSubmitted(true)
-      }
-    } catch (err) {
-      // Show success state even on error - submission likely went through
-      setSubmitted(true)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <section id="top" className="relative flex min-h-[85vh] items-center overflow-hidden pt-20">
@@ -72,41 +38,16 @@ export function FreeLetterHero() {
             Read the first Little Red Mailbox story and get a feel for the kind of real life, grounded stories we send each month.
           </p>
 
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <label htmlFor="email-capture" className="sr-only">
-                Your email address
-              </label>
-              <input
-                id="email-capture"
-                type="email"
-                required
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-4 text-base text-primary-foreground placeholder:text-primary-foreground/50 backdrop-blur-sm focus:border-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary-foreground/20"
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-70"
-              >
-                {isSubmitting ? "Sending..." : "Get the Free Letter"}
-              </button>
-            </form>
-          ) : (
-            <div className="mt-8 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-6 py-5 backdrop-blur-sm">
-              <p className="font-serif text-lg font-bold text-primary-foreground">
-                Check your inbox!
-              </p>
-              <p className="mt-1 text-sm text-primary-foreground/80">
-                Your free Little Red Mailbox letter is on its way. Keep an eye out for an email from us.
-              </p>
-            </div>
-          )}
-          <p className="mt-3 text-xs text-primary-foreground/60">
-            Get your free sample letter delivered to your email inbox.
-          </p>
+          <div className="mt-8">
+            <a
+              href="https://preview.mailerlite.io/forms/2242500/183738983904183349/share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Get the Free Letter
+            </a>
+          </div>
 
           <div className="mt-8 border-t border-primary-foreground/15 pt-6">
             <p className="text-sm text-primary-foreground/80">
