@@ -4,6 +4,19 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { SectionObserver } from "@/components/section-observer"
 
+declare global {
+  interface Window {
+    ml?: (action: string, formId: string, show: boolean) => void
+  }
+}
+
+function openMailerLitePopup(e: React.MouseEvent) {
+  e.preventDefault()
+  if (typeof window !== "undefined" && window.ml) {
+    window.ml("show", "gwYLVS", true)
+  }
+}
+
 function scrollToPricing(router: ReturnType<typeof useRouter>) {
   return (e: React.MouseEvent) => {
     e.preventDefault()
@@ -39,14 +52,12 @@ export function FreeLetterHero() {
           </p>
 
           <div className="mt-8">
-            <a
-              href="https://preview.mailerlite.io/forms/2242500/183738983904183349/share"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openMailerLitePopup}
               className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Get the Free Letter
-            </a>
+            </button>
           </div>
 
           <div className="mt-8 border-t border-primary-foreground/15 pt-6">
@@ -93,12 +104,12 @@ export function WhatYoullGet() {
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                 Your sample story arrives instantly in your inbox so you can preview the kind of adventure kids receive.
               </p>
-              <a
-                href="#top"
+              <button
+                onClick={openMailerLitePopup}
                 className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Get the Free Sample Letter
-              </a>
+              </button>
             </div>
             <div className="flex flex-col rounded-lg border border-border bg-background p-8 text-center">
               <h3 className="font-serif text-lg font-bold text-foreground">Skip the Preview — Start My Subscription</h3>
@@ -167,12 +178,12 @@ export function WhyFamiliesLoveIt() {
               
               {/* CTA Buttons */}
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start">
-                <a
-                  href="#top"
+                <button
+                  onClick={openMailerLitePopup}
                   className="inline-flex items-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   Get the Free Letter
-                </a>
+                </button>
                 <button
                   onClick={scrollToPricing(router)}
                   className="inline-flex items-center rounded-lg border-2 border-primary bg-transparent px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
