@@ -182,8 +182,8 @@ export function TransformationSection() {
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg md:w-1/2">
               <Image
-                src="/images/child-mailbox.jpg"
-                alt="A boy in a plaid shirt checking a red mailbox on a country road"
+                src="/images/kids-running-mailbox.jpg"
+                alt="Two children in overalls running toward a red mailbox on a rural path"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
