@@ -138,11 +138,11 @@ export function WhyFamiliesLoveIt() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
-            {/* Left side - Photo of kids running to mailbox */}
+            {/* Left side - Photo of kids reading letter */}
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg md:w-2/5">
               <Image
-                src="/images/kids-running-mailbox.jpg"
-                alt="Two kids running excitedly down a country road toward a red mailbox"
+                src="/images/kids-reading-letter.jpg"
+                alt="Two children in overalls reading a letter together outdoors at sunset"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 40vw, 100vw"
