@@ -102,7 +102,7 @@ export function WhatYoullGet() {
             <div className="flex flex-col rounded-lg border border-border bg-background p-8 text-center">
               <h3 className="font-serif text-lg font-bold text-foreground">Free Sample Letter (Email)</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                Your sample story arrives instantly in your inbox so you can preview the kind of adventure kids receive.
+                Your sample story arrives instantly in your inbox so you can preview the story style, tone, and mission format.
               </p>
               <button
                 onClick={openMailerLitePopup}
@@ -160,19 +160,19 @@ export function WhyFamiliesLoveIt() {
               <ul className="mt-8 flex flex-col gap-3 text-left">
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  <span className="text-base text-muted-foreground">Screen-free storytelling</span>
+                  <span className="text-base text-muted-foreground">A short story kids can read or hear aloud</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  <span className="text-base text-muted-foreground">Encourages curiosity and creativity</span>
+                  <span className="text-base text-muted-foreground">A simple mission to try after the story</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  <span className="text-base text-muted-foreground">Builds character through action</span>
+                  <span className="text-base text-muted-foreground">Grounded themes inspired by farm life and the outdoors</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  <span className="text-base text-muted-foreground">Creates small moments of connection between parents and kids</span>
+                  <span className="text-base text-muted-foreground">A screen free moment families can share</span>
                 </li>
               </ul>
               
