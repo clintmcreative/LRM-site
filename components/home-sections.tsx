@@ -28,10 +28,10 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-32">
         <div className="max-w-2xl">
           <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl text-balance">
-            A Screen-Free Monthly Adventure Your Kids Will Look Forward To
+            A Screen Free Story and Adventure Your Kids Will Look Forward To
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-            Every month, we mail your child an original story, a hands-on mission, and a small surprise — addressed personally to them. Real paper. Real adventure. Zero screens.
+            Every month, we mail your child a short story, a hands on mission, and a small surprise delivered right to the mailbox.
           </p>
           <p className="mt-4 text-lg font-bold text-primary-foreground md:text-xl">
             Because kids still love getting mail.
@@ -218,7 +218,7 @@ export function TransformationSection() {
                 </li>
               </ul>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                This is simple, screen-free adventure designed to help kids grow steady, curious, and capable. Rooted in farm life, the outdoors, and simple, meaningful work.
+                This is simple, screen free adventure designed to help kids grow steady, curious, and capable. Rooted in farm life, the outdoors, and simple, meaningful work.
               </p>
             </div>
           </div>
@@ -262,7 +262,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Short Story</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    An original adventure story that captures imaginations and teaches timeless values through compelling characters.
+                    A standalone read aloud story rooted in farm life, curiosity, and meaningful adventure.
                   </p>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Mission</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A hands-on activity or challenge that gets kids off the couch and into the real world -- building, exploring, and problem-solving.
+                    A simple hands on mission that encourages kids to explore, build, notice, and try something new in the real world.
                   </p>
                 </div>
               </div>
@@ -284,7 +284,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A small, meaningful token tucked inside each envelope that brings the adventure to life.
+                    A small token tucked inside each envelope that helps bring the story and adventure to life.
                   </p>
                 </div>
               </div>

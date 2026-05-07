@@ -26,12 +26,12 @@ const faqs = [
   {
     question: "What are the stories about?",
     answer:
-      "Little Red Mailbox stories are rooted in simple, real-life experiences that shape capable kids. Each month follows characters who work, explore, build, and solve problems — often inspired by farm life, the outdoors, and small-town living. They're not fast-paced or fantasy-driven. They're grounded stories that reward effort, curiosity, and responsibility. You don't have to live on a farm to raise a kid with a farmer's mindset.",
+      "Little Red Mailbox stories are standalone adventures rooted in real life, curiosity, and meaningful work. Each envelope includes a short story, a simple hands on mission, and a small surprise tied to the experience. The stories are inspired by farm life, the outdoors, old fashioned problem solving, and the kind of moments that help kids grow capable and curious. Some children read them independently while others enjoy them as a family read aloud.",
   },
   {
     question: "What comes inside each envelope?",
     answer:
-      "Every envelope contains three things: a short original adventure story, a hands-on mission or activity, and a small surprise. The story is the heart of the letter, the mission gets your child off the couch and into the real world, and the surprise brings a little extra joy to the experience.",
+      "Every envelope includes three things: a short standalone story, a simple hands on mission or activity, and a small surprise tied to the experience. The story draws kids into meaningful adventures, the mission encourages real world curiosity and action, and the surprise adds a little extra excitement to the mailbox moment.",
   },
   {
     question: "How do I cancel?",
