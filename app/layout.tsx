@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Lora, Source_Sans_3 } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 
 const _lora = Lora({
@@ -53,6 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${_lora.variable} ${_sourceSans.variable}`}>
+      <GoogleTagManager gtmId="GTM-KGBX8KLR" />
       <head>
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV1Z9NZMKB" />
