@@ -56,13 +56,6 @@ export default function RootLayout({
     <html lang="en" className={`${_lora.variable} ${_sourceSans.variable}`}>
       <GoogleTagManager gtmId="GTM-KGBX8KLR" />
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV1Z9NZMKB" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-RV1Z9NZMKB');`,
-          }}
-        />
         {/* MailerLite universal script */}
         <script
           dangerouslySetInnerHTML={{
