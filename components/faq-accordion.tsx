@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import { ChevronDown } from "lucide-react"
 
 interface FAQItem {
@@ -39,28 +38,15 @@ function CancelAnswer() {
 }
 
 function GiftAnswer() {
-  const router = useRouter()
-
-  const scrollToPricing = (e: React.MouseEvent) => {
-    e.preventDefault()
-    router.push("/#pricing")
-  }
-
   return (
     <div className="space-y-3">
-      <p>Absolutely. Little Red Mailbox makes a meaningful gift for birthdays, holidays, or just because.</p>
-      <p>We offer two gift options:</p>
-      <ul className="list-disc pl-5 space-y-1">
-        <li>6-month gift</li>
-        <li>12-month gift</li>
-      </ul>
-      <p>These are one-time purchases and do not auto-renew.</p>
-      <button
-        onClick={scrollToPricing}
-        className="inline-flex items-center text-primary underline underline-offset-2 hover:text-primary/80"
-      >
-        View Gift Options
-      </button>
+      <p>
+        Absolutely. Little Red Mailbox makes a meaningful gift for birthdays, holidays, grandchildren, or any child who would enjoy receiving real mail each month.
+      </p>
+      <p>
+        Simply choose either a monthly or yearly subscription and have it shipped directly to the child. Each month they will receive a new story, a hands on mission, and a small surprise in the mail.
+      </p>
+      <p>Subscriptions can be canceled at any time.</p>
     </div>
   )
 }
