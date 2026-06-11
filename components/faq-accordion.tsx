@@ -51,6 +51,22 @@ function GiftAnswer() {
   )
 }
 
+function AgeAnswer() {
+  return (
+    <div className="space-y-3">
+      <p>
+        Little Red Mailbox is designed primarily for children ages 7 to 10. The stories and missions are written to be engaging and accessible for that age range while encouraging curiosity, responsibility, and independent thinking.
+      </p>
+      <p>
+        For younger children, many families enjoy reading the stories aloud together. Some older children enjoy them as well, especially those who love stories, adventure, and hands on activities.
+      </p>
+      <p>
+        Rather than focusing on a specific age, we encourage parents to consider their child{"'"}s interests and reading level. The recommended age range is a guide, not a strict rule.
+      </p>
+    </div>
+  )
+}
+
 export function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
@@ -60,6 +76,9 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
     }
     if (answer === "gift_special") {
       return <GiftAnswer />
+    }
+    if (answer === "age_special") {
+      return <AgeAnswer />
     }
     return answer
   }

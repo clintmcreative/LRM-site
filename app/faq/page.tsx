@@ -20,8 +20,7 @@ const faqs = [
   },
   {
     question: "What age is this for?",
-    answer:
-      "Little Red Mailbox is designed for children ages 7 to 10. The stories and missions are written to be engaging and challenging enough for this age range while still being warm and accessible. Some younger or older children enjoy them too, but the sweet spot is right in that 7-10 window.",
+    answer: "age_special",
   },
   {
     question: "What are the stories about?",
