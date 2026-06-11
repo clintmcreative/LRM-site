@@ -457,8 +457,6 @@ export function FinalCTASection() {
 // Stripe checkout links
 const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00"
 const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01"
-const GIFT_6_MONTH_LINK = "https://buy.stripe.com/8x228r0pQ5324wgcMZfIs02"
-const GIFT_YEARLY_LINK = "https://buy.stripe.com/4gM00jb4ugLKbYI9ANfIs03"
 
 function CheckIcon() {
   return (
@@ -489,12 +487,6 @@ export function PlanSelectionSection() {
     "Our most popular option",
   ]
 
-  const giftFeatures = [
-    "Ships monthly to recipient",
-    "No renewal required",
-    "Perfect for birthdays and holidays",
-  ]
-
   return (
     <section id="pricing" className="scroll-mt-20 bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -510,7 +502,7 @@ export function PlanSelectionSection() {
         </SectionObserver>
 
         <SectionObserver>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-6 md:grid-cols-2">
             {/* Monthly Plan */}
             <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
               <div className="px-6 py-6 text-center">
@@ -589,43 +581,6 @@ export function PlanSelectionSection() {
                 >
                   Join Yearly
                 </a>
-              </div>
-            </div>
-
-            {/* Gift Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background md:col-span-2 lg:col-span-1">
-              <div className="px-6 py-6 text-center">
-                <h3 className="font-serif text-2xl font-bold text-foreground">
-                  Gift
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  A thoughtful gift that arrives each month.
-                </p>
-              </div>
-              <div className="flex flex-1 flex-col px-6 py-6">
-                <ul className="flex flex-1 flex-col gap-3">
-                  {giftFeatures.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckIcon />
-                      <span className="text-sm text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-6 flex flex-col gap-3">
-                  <a
-                    href={GIFT_6_MONTH_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                  >
-                    6 Month Gift — $65
-                  </a>
-                  <a
-                    href={GIFT_YEARLY_LINK}
-                    className="inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                  >
-                    Yearly Gift — $119
-                  </a>
-                </div>
               </div>
             </div>
           </div>
