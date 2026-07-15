@@ -418,28 +418,24 @@ export function FinalCTASection() {
             <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl text-balance">
               Why Our Stories Begin on the Farm
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
+            <div className="mx-auto mt-6 max-w-[820px] space-y-5 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
               <p>
-                Long before screens filled our homes, farms helped shape capable kids.
+                Long before screens filled our homes, farms helped shape capable kids. A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
               </p>
               <p>
-                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
-              </p>
-              <p>
-                That{"'"}s why our stories begin on the farm.
-              </p>
-              <p>
-                Not because every family lives on one, but because every child can benefit from the mindset it inspires.
+                That{"'"}s why our stories begin on the farm. Not because every family lives on one, but because every child can benefit from the mindset it inspires.
               </p>
               <p>
                 Each month, your child receives an original story inspired by farm life, a simple hands-on mission that brings the story to life, and a small surprise tucked inside every envelope.
               </p>
-              <p>
-                Because childhood doesn{"'"}t need more noise.
-              </p>
-              <p>
-                It needs more moments that grow something.
-              </p>
+              <div className="mt-8">
+                <p>
+                  Because childhood doesn{"'"}t need more noise.
+                </p>
+                <p className="mt-1 font-semibold">
+                  It needs more moments that grow something.
+                </p>
+              </div>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <button
