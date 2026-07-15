@@ -28,10 +28,10 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-32">
         <div className="max-w-2xl">
           <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl text-balance">
-            A Screen Free Story and Adventure Your Kids Will Look Forward To
+            Childhood Shouldn{"'"}t Happen on a Screen.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-            Every month, we mail your child a short story, a hands on mission, and a small surprise delivered right to the mailbox.
+            Every month, your child receives <strong className="font-semibold">an original story</strong> written just for Little Red Mailbox, <strong className="font-semibold">a hands-on mission</strong> that brings it to life, and <strong className="font-semibold">a small surprise</strong> tucked inside every envelope.
           </p>
           <p className="mt-4 text-lg font-bold text-primary-foreground md:text-xl">
             Because kids still love getting mail.
@@ -191,34 +191,34 @@ export function TransformationSection() {
             </div>
             <div className="md:w-1/2">
               <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                More Than Just Mail
+                Something Real to Look Forward To
               </span>
               <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
                 Little Red Mailbox helps families reclaim small moments that matter.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Kids begin to:
+                Here{"'"}s what starts to happen:
               </p>
               <ul className="mt-4 flex flex-col gap-2 text-base leading-relaxed text-muted-foreground md:text-lg">
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Look forward to the mailbox
+                  Look forward to checking the mailbox
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Get pulled into meaningful stories
+                  Get pulled into original stories
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Try new things with their hands
+                  Bring the story to life through simple hands-on missions
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Talk with parents about what they discovered
+                  Talk with their family about what they discovered
                 </li>
               </ul>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                This is simple, screen free adventure designed to help kids grow steady, curious, and capable. Rooted in farm life, the outdoors, and simple, meaningful work.
+                Little Red Mailbox gives families one meaningful moment they can count on every month. Inspired by farm life, original stories, and hands-on exploration, every envelope invites kids to slow down, imagine, and discover something new.
               </p>
             </div>
           </div>
@@ -235,7 +235,7 @@ export function WhatsInsideSection() {
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Inside Each Envelope
+              Every Envelope Includes
             </span>
             <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
               What your child will discover each month.
@@ -262,7 +262,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Short Story</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A standalone read aloud story rooted in farm life, curiosity, and meaningful adventure.
+                    An original story written exclusively for Little Red Mailbox, inspired by farm life, curiosity, and meaningful adventure.
                   </p>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Mission</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A simple hands on mission that encourages kids to explore, build, notice, and try something new in the real world.
+                    A simple hands-on mission that brings the story to life through real-world exploration, creativity, and discovery.
                   </p>
                 </div>
               </div>
@@ -284,7 +284,7 @@ export function WhatsInsideSection() {
                 <div>
                   <h3 className="font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A small token tucked inside each envelope that helps bring the story and adventure to life.
+                    A small surprise tucked inside every envelope that adds one more reason to smile when the mailbox opens.
                   </p>
                 </div>
               </div>
@@ -326,9 +326,9 @@ export function BenefitsSection() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                 <TreePine className="h-7 w-7 text-accent" />
               </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Raise {"'"}em Up.</h3>
+              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Capable Kids Grow Through Experience.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Each letter reinforces values like grit, responsibility, patience, and gratitude through story and mission. Built through story, not lectures.
+                Farm life has always taught patience, responsibility, curiosity, and resourcefulness—not through lectures, but through everyday life. Little Red Mailbox follows that same philosophy, helping kids grow through stories they experience, not lessons they{"'"}re told.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-8 text-center sm:col-span-2 lg:col-span-1">
@@ -337,7 +337,7 @@ export function BenefitsSection() {
               </div>
               <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Conversations you{"'"}ve been missing.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Missions are designed to be done together. The letters become shared memories and meaningful conversations. Simple moments that actually happen.
+                Every mission gives families one more reason to talk, laugh, wonder, and discover something together long after the story ends.
               </p>
             </div>
           </div>
@@ -368,7 +368,7 @@ export function HowItWorksSection() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <span className="font-serif text-2xl font-bold">1</span>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Join the Club</h3>
+              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Join Little Red Mailbox</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Subscribe in under a minute.
               </p>
@@ -379,16 +379,16 @@ export function HowItWorksSection() {
               </div>
               <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Check the Mailbox</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                A new story and mission arrives each month.
+                An original story, a hands-on mission, and a small surprise arrive each month.
               </p>
             </div>
             <div className="text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <span className="font-serif text-2xl font-bold">3</span>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Read. Explore. Do.</h3>
+              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Read. Imagine. Discover.</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Kids read the story and try the hands-on mission.
+                Every envelope invites kids to slow down, explore, and try something new.
               </p>
             </div>
           </div>
@@ -416,17 +416,29 @@ export function FinalCTASection() {
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl text-balance">
-              Turn the Mailbox Into an Adventure
+              Why Our Stories Begin on the Farm
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
               <p>
-                Each month brings a story rooted in real life, inspired by farm work, the outdoors, and the kind of challenges that shape capable kids.
+                Long before screens filled our homes, farms helped shape capable kids.
               </p>
               <p>
-                Kids do not just read these stories. They step into them, trying, building, exploring, and growing along the way.
+                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
               </p>
               <p>
-                Because childhood does not need more noise. It needs more moments that matter.
+                That{"'"}s why our stories begin on the farm.
+              </p>
+              <p>
+                Not because every family lives on one, but because every child can benefit from the mindset it inspires.
+              </p>
+              <p>
+                Each month, your child receives an original story inspired by farm life, a simple hands-on mission that brings the story to life, and a small surprise tucked inside every envelope.
+              </p>
+              <p>
+                Because childhood doesn{"'"}t need more noise.
+              </p>
+              <p>
+                It needs more moments that grow something.
               </p>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
