@@ -418,17 +418,17 @@ export function FinalCTASection() {
             <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl text-balance">
               Why Our Stories Begin on the Farm
             </h2>
-            <div className="mx-auto mt-6 max-w-[820px] space-y-5 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
+            <div className="mx-auto mt-6 max-w-[780px] text-base leading-relaxed text-primary-foreground/85 md:text-lg">
               <p>
-                Long before screens filled our homes, farms helped shape capable kids. A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
+                Long before screens filled our homes, farms helped shape capable kids.
               </p>
-              <p>
-                That{"'"}s why our stories begin on the farm. Not because every family lives on one, but because every child can benefit from the mindset it inspires.
+              <p className="mt-4">
+                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
               </p>
-              <p>
-                Each month, your child receives an original story inspired by farm life, a simple hands-on mission that brings the story to life, and a small surprise tucked inside every envelope.
+              <p className="mt-6">
+                You don{"'"}t have to live on a farm to learn those lessons.
               </p>
-              <div className="mt-8">
+              <div className="mt-6">
                 <p>
                   Because childhood doesn{"'"}t need more noise.
                 </p>
