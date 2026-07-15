@@ -423,19 +423,11 @@ export function FinalCTASection() {
                 Long before screens filled our homes, farms helped shape capable kids.
               </p>
               <p className="mt-4">
-                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.
+                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told. You don{"'"}t have to live on a farm to learn those lessons.
               </p>
-              <p className="mt-6">
-                You don{"'"}t have to live on a farm to learn those lessons.
+              <p className="mt-4">
+                Because childhood doesn{"'"}t need more noise. It needs more moments that grow something.
               </p>
-              <div className="mt-6">
-                <p>
-                  Because childhood doesn{"'"}t need more noise.
-                </p>
-                <p className="mt-1 font-semibold">
-                  It needs more moments that grow something.
-                </p>
-              </div>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <button
