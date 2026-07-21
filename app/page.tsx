@@ -23,7 +23,8 @@ export default function HomePage() {
         <CTASection
           variant="primary"
           heading="Kids still love opening mail."
-          subheading="Stories, missions, and surprises delivered monthly."
+          subheading="A thoughtful gift for curious kids who still love getting real mail."
+          buttonText="Give Little Red Mailbox"
         />
 
         <TransformationSection />
@@ -34,18 +35,11 @@ export default function HomePage() {
 
         <CTASection
           variant="primary"
-          heading="A Gift They&apos;ll Actually Look Forward To"
-          subheading="Something that shows up every month — not something forgotten after a day."
-          buttonText="Gift a Subscription"
-        />
-
-        <BenefitsSection />
-
-        <CTASection
-          variant="primary"
           heading="Ready to trade screen time for story time?"
           showFreeLetterButton
         />
+
+        <BenefitsSection />
 
         <PlanSelectionSection />
       </main>

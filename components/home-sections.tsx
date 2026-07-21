@@ -404,10 +404,10 @@ export function PlanSelectionSection() {
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-              Choose Your Subscription
+              A Gift They{"'"}ll Actually Look Forward To
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              Select the option that fits your family best.
+              Choose monthly or yearly delivery for a curious kid in your life.
             </p>
           </div>
         </SectionObserver>
