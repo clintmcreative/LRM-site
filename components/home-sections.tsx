@@ -167,16 +167,16 @@ export function WhatsInsideSection() {
 
         <SectionObserver>
           <div className="mt-12 flex flex-col items-center gap-10 md:flex-row md:gap-16">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:w-1/2">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:w-3/5">
               <Image
                 src="/images/product-envelope-contents.jpg"
                 alt="Little Red Mailbox envelope with an original story, hands-on mission, and small surprise"
                 fill
                 className="object-cover object-center"
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 768px) 60vw, 100vw"
               />
             </div>
-            <div className="flex flex-col gap-8 md:w-1/2">
+            <div className="flex flex-col gap-8 md:w-2/5">
               <div className="flex gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
                   <BookOpen className="h-6 w-6 text-primary" />
