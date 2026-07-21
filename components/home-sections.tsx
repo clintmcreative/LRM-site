@@ -281,8 +281,8 @@ export function HowItWorksSection() {
           <div className="mt-12 grid items-center gap-10 md:grid-cols-2 md:gap-16">
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
               <Image
-                src="/images/hand-holding-envelope.png"
-                alt="Hand holding a Little Red Mailbox envelope"
+                src="/images/hand-holding-envelope-stamped.png"
+                alt="Hand holding a Little Red Mailbox envelope with a Forever stamp"
                 fill
                 className="object-cover object-center"
                 sizes="(min-width: 768px) 50vw, 100vw"
