@@ -28,10 +28,7 @@ export default function HomePage() {
 
         <TransformationSection />
 
-        <CTASection
-          variant="primary"
-          heading="Ready to trade screen time for story time?"
-        />
+        <FinalCTASection />
 
         <HowItWorksSection />
 
@@ -44,7 +41,10 @@ export default function HomePage() {
 
         <BenefitsSection />
 
-        <FinalCTASection />
+        <CTASection
+          variant="primary"
+          heading="Ready to trade screen time for story time?"
+        />
 
         <PlanSelectionSection />
       </main>
