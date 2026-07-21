@@ -116,7 +116,7 @@ export function TransformationSection() {
                 Kids don{"'"}t just need less screen time. They need something better to take its place. Something slower, more meaningful, and real.
               </p>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Here{"'"}s what starts to happen:
+                Your child begins to:
               </p>
               <ul className="mt-4 flex flex-col gap-2 text-base leading-relaxed text-muted-foreground md:text-lg">
                 <li className="flex items-start gap-2">
