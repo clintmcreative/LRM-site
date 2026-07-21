@@ -53,90 +53,6 @@ export function HeroSection() {
   )
 }
 
-export function ProblemStatementSection() {
-  return (
-    <section className="bg-background py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="rounded-xl border border-border bg-card p-8 md:p-12 shadow-sm">
-        <SectionObserver>
-          <div className="text-center">
-            <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl text-balance">
-              Childhood is happening on a screen.
-            </h2>
-            <p className="mt-2 font-serif text-xl italic text-muted-foreground md:text-2xl">
-              It doesn{"'"}t have to.
-            </p>
-
-            {/* Screen to Envelope icon transition */}
-            <div className="mt-6 flex items-center justify-center gap-4">
-              {/* Screen/tablet icon */}
-              <svg
-                viewBox="0 0 40 40"
-                className="h-10 w-10 md:h-12 md:w-12"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="6" y="4" width="28" height="32" rx="2" className="stroke-primary" />
-                <line x1="6" y1="30" x2="34" y2="30" className="stroke-primary" />
-                <circle cx="20" cy="34" r="1.5" className="fill-primary stroke-primary" />
-              </svg>
-
-              {/* Arrow */}
-              <svg
-                viewBox="0 0 24 24"
-                className="h-5 w-5 md:h-6 md:w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="4" y1="12" x2="20" y2="12" className="stroke-primary" />
-                <polyline points="14,6 20,12 14,18" className="stroke-primary" />
-              </svg>
-
-              {/* Envelope icon */}
-              <svg
-                viewBox="0 0 40 40"
-                className="h-10 w-10 md:h-12 md:w-12"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* Envelope body */}
-                <rect x="4" y="10" width="32" height="22" rx="2" className="stroke-primary" />
-                {/* Envelope flap - V shape */}
-                <path d="M4 12 L20 24 L36 12" className="stroke-primary" />
-                {/* Bottom corner lines */}
-                <path d="M4 32 L14 22" className="stroke-primary" />
-                <path d="M36 32 L26 22" className="stroke-primary" />
-              </svg>
-            </div>
-
-            <div className="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
-              <p>
-                The average 7-year-old spends more than 4 hours a day looking at a glowing rectangle. Another show. Another scroll. Another afternoon gone.
-              </p>
-              <p>
-                You don{"'"}t want to lecture them off the iPad. You want to replace it with something better. Something slower, more meaningful, and real.
-              </p>
-              <p>
-                That{"'"}s the whole idea behind Little Red Mailbox: a small piece of magic that arrives in your mailbox once a month, with your child{"'"}s name on it.
-              </p>
-            </div>
-          </div>
-        </SectionObserver>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 export function FarmMindsetSection() {
   return (
     <section className="bg-card py-16 md:py-24">
@@ -197,6 +113,9 @@ export function TransformationSection() {
                 Little Red Mailbox helps families reclaim small moments that matter.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+                Kids don{"'"}t just need less screen time. They need something better to take its place. Something slower, more meaningful, and real.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
                 Here{"'"}s what starts to happen:
               </p>
               <ul className="mt-4 flex flex-col gap-2 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -218,7 +137,7 @@ export function TransformationSection() {
                 </li>
               </ul>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Little Red Mailbox gives families one meaningful moment they can count on every month. Inspired by farm life, original stories, and hands-on exploration, every envelope invites kids to slow down, imagine, and discover something new.
+                Little Red Mailbox gives families one meaningful moment they can count on every month. Each envelope invites kids to slow down, imagine, use their hands, and discover something new.
               </p>
             </div>
           </div>
@@ -235,11 +154,14 @@ export function WhatsInsideSection() {
         <SectionObserver>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Every Envelope Includes
+              Open the Envelope
             </span>
             <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              What your child will discover each month.
+              See What Arrives in the Mailbox
             </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              A complete screen-free adventure, delivered in a real envelope with your child{"'"}s name on it.
+            </p>
           </div>
         </SectionObserver>
 
@@ -247,10 +169,10 @@ export function WhatsInsideSection() {
           <div className="mt-12 flex flex-col items-center gap-10 md:flex-row md:gap-16">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:w-1/2">
               <Image
-                src="/images/child-holding-letter.jpg"
-                alt="A child in a burgundy sweater and denim jacket holding a kraft paper envelope"
+                src="/images/product-envelope-contents.jpg"
+                alt="Little Red Mailbox envelope with an original story, hands-on mission, and small surprise"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>

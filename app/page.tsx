@@ -3,7 +3,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { CTASection } from "@/components/cta-section"
 import {
   HeroSection,
-  ProblemStatementSection,
   HowItWorksSection,
   TransformationSection,
   WhatsInsideSection,
@@ -19,7 +18,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
 
-        <ProblemStatementSection />
+        <WhatsInsideSection />
 
         <TransformationSection />
 
@@ -36,8 +35,6 @@ export default function HomePage() {
           subheading="Something that shows up every month — not something forgotten after a day."
           buttonText="Gift a Subscription"
         />
-
-        <WhatsInsideSection />
 
         <CTASection
           variant="primary"
