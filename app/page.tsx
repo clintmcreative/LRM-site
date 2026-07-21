@@ -3,7 +3,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { CTASection } from "@/components/cta-section"
 import {
   HeroSection,
-  ProblemStatementSection,
   HowItWorksSection,
   TransformationSection,
   WhatsInsideSection,
@@ -19,14 +18,17 @@ export default function HomePage() {
       <main>
         <HeroSection />
 
-        <ProblemStatementSection />
-
-        <TransformationSection />
+        <WhatsInsideSection />
 
         <CTASection
           variant="primary"
-          heading="Ready to trade screen time for story time?"
+          heading="Kids still love opening mail."
+          subheading="Stories, missions, and surprises delivered monthly."
         />
+
+        <TransformationSection />
+
+        <FinalCTASection />
 
         <HowItWorksSection />
 
@@ -37,17 +39,13 @@ export default function HomePage() {
           buttonText="Gift a Subscription"
         />
 
-        <WhatsInsideSection />
+        <BenefitsSection />
 
         <CTASection
           variant="primary"
-          heading="Kids still love opening mail."
-          subheading="Stories, missions, and surprises delivered monthly."
+          heading="Ready to trade screen time for story time?"
+          showFreeLetterButton
         />
-
-        <BenefitsSection />
-
-        <FinalCTASection />
 
         <PlanSelectionSection />
       </main>
