@@ -44,6 +44,7 @@ export default function HomePage() {
         <CTASection
           variant="primary"
           heading="Ready to trade screen time for story time?"
+          showFreeLetterButton
         />
 
         <PlanSelectionSection />

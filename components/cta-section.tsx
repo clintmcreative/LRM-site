@@ -1,10 +1,13 @@
 "use client"
 
+import Link from "next/link"
+
 interface CTASectionProps {
   variant?: "primary" | "secondary"
   heading?: string
   subheading?: string
   buttonText?: string
+  showFreeLetterButton?: boolean
 }
 
 function scrollToPricing(e: React.MouseEvent) {
@@ -12,11 +15,17 @@ function scrollToPricing(e: React.MouseEvent) {
   document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" })
 }
 
+function openFreeLetterPopup(e: React.MouseEvent) {
+  e.preventDefault()
+  window.ml && window.ml("show", "gwYLVS", true)
+}
+
 export function CTASection({
   variant = "primary",
   heading,
   subheading,
   buttonText = "Join the Club",
+  showFreeLetterButton = false,
 }: CTASectionProps) {
   if (variant === "secondary") {
     return (
@@ -58,13 +67,22 @@ export function CTASection({
             {subheading}
           </p>
         )}
-        <div className="mt-2">
+        <div className="mt-2 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <button
             onClick={scrollToPricing}
             className="inline-flex items-center rounded-lg bg-primary-foreground px-7 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
           >
             {buttonText}
           </button>
+          {showFreeLetterButton && (
+            <Link
+              href="/free-letter"
+              onClick={openFreeLetterPopup}
+              className="inline-flex items-center rounded-lg border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+            >
+              Read the First Letter Free
+            </Link>
+          )}
         </div>
       </div>
     </section>
