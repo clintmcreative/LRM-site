@@ -20,6 +20,12 @@ export default function HomePage() {
 
         <WhatsInsideSection />
 
+        <CTASection
+          variant="primary"
+          heading="Kids still love opening mail."
+          subheading="Stories, missions, and surprises delivered monthly."
+        />
+
         <TransformationSection />
 
         <CTASection
@@ -34,12 +40,6 @@ export default function HomePage() {
           heading="A Gift They&apos;ll Actually Look Forward To"
           subheading="Something that shows up every month — not something forgotten after a day."
           buttonText="Gift a Subscription"
-        />
-
-        <CTASection
-          variant="primary"
-          heading="Kids still love opening mail."
-          subheading="Stories, missions, and surprises delivered monthly."
         />
 
         <BenefitsSection />
