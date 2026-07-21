@@ -165,49 +165,43 @@ export function WhatsInsideSection() {
         </SectionObserver>
 
         <SectionObserver>
-          <div className="mt-12 flex flex-col items-center gap-10 md:flex-row md:gap-16">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:w-3/5">
+          <div className="mt-12 flex flex-col items-center">
+            <div className="relative aspect-[4/3] w-full max-w-4xl overflow-hidden rounded-lg">
               <Image
                 src="/images/product-envelope-contents.jpg"
                 alt="Little Red Mailbox envelope with an original story, hands-on mission, and small surprise"
                 fill
                 className="object-cover object-center"
-                sizes="(min-width: 768px) 60vw, 100vw"
+                sizes="(min-width: 896px) 896px, 100vw"
               />
             </div>
-            <div className="flex flex-col gap-8 md:w-2/5">
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <BookOpen className="h-6 w-6 text-primary" />
+            <div className="mt-12 grid w-full gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
+              <div className="flex flex-col items-center text-center">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <BookOpen className="h-7 w-7 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-serif text-lg font-bold text-foreground">A Short Story</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    An original story written exclusively for Little Red Mailbox, inspired by farm life, curiosity, and meaningful adventure.
-                  </p>
-                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Short Story</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  An original story written exclusively for Little Red Mailbox, inspired by farm life, curiosity, and meaningful adventure.
+                </p>
               </div>
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/10">
-                  <Compass className="h-6 w-6 text-accent" />
+              <div className="flex flex-col items-center text-center">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-accent/10">
+                  <Compass className="h-7 w-7 text-accent" />
                 </div>
-                <div>
-                  <h3 className="font-serif text-lg font-bold text-foreground">A Mission</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A simple hands-on mission that brings the story to life through real-world exploration, creativity, and discovery.
-                  </p>
-                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Mission</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  A simple hands-on mission that brings the story to life through real-world exploration, creativity, and discovery.
+                </p>
               </div>
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary">
-                  <Gift className="h-6 w-6 text-secondary-foreground" />
+              <div className="flex flex-col items-center text-center sm:col-span-2 md:col-span-1">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-secondary">
+                  <Gift className="h-7 w-7 text-secondary-foreground" />
                 </div>
-                <div>
-                  <h3 className="font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    A small surprise tucked inside every envelope that adds one more reason to smile when the mailbox opens.
-                  </p>
-                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  A small surprise tucked inside every envelope that adds one more reason to smile when the mailbox opens.
+                </p>
               </div>
             </div>
           </div>
@@ -284,33 +278,50 @@ export function HowItWorksSection() {
         </SectionObserver>
 
         <SectionObserver>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <span className="font-serif text-2xl font-bold">1</span>
-              </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Join Little Red Mailbox</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Subscribe in under a minute.
-              </p>
+          <div className="mt-12 grid items-center gap-10 md:grid-cols-2 md:gap-16">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
+              <Image
+                src="/images/hand-holding-envelope.png"
+                alt="Hand holding a Little Red Mailbox envelope"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
             </div>
-            <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <span className="font-serif text-2xl font-bold">2</span>
+            <div className="flex flex-col gap-8">
+              <div className="flex gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <span className="font-serif text-2xl font-bold">1</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground">Join Little Red Mailbox</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Subscribe in under a minute.
+                  </p>
+                </div>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Check the Mailbox</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                An original story, a hands-on mission, and a small surprise arrive each month.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <span className="font-serif text-2xl font-bold">3</span>
+              <div className="flex gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <span className="font-serif text-2xl font-bold">2</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground">Check the Mailbox</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    An original story, a hands-on mission, and a small surprise arrive each month.
+                  </p>
+                </div>
               </div>
-              <h3 className="mt-6 font-serif text-xl font-bold text-foreground">Read. Imagine. Discover.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Every envelope invites kids to slow down, explore, and try something new.
-              </p>
+              <div className="flex gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <span className="font-serif text-2xl font-bold">3</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground">Read. Imagine. Discover.</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Every envelope invites kids to slow down, explore, and try something new.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </SectionObserver>
