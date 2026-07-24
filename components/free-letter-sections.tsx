@@ -32,8 +32,8 @@ export function FreeLetterHero() {
     <section id="top" className="relative flex min-h-[85vh] items-center overflow-hidden pt-20">
       <div className="absolute inset-0">
         <Image
-          src="/images/envelope-opening.jpg"
-          alt="A child's hands opening a kraft paper envelope with a letter inside"
+          src="/images/little-red-mailbox-story-flatlay.png"
+          alt="Little Red Mailbox monthly story pages, handwritten letter, and red envelopes arranged on a farmhouse table"
           fill
           className="object-cover"
           priority
