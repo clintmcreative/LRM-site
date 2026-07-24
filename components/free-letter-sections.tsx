@@ -32,14 +32,15 @@ export function FreeLetterHero() {
     <section id="top" className="relative flex min-h-[85vh] items-center overflow-hidden pt-20">
       <div className="absolute inset-0">
         <Image
-          src="/images/little-red-mailbox-story-flatlay.png"
-          alt="Little Red Mailbox monthly story pages, handwritten letter, and red envelopes arranged on a farmhouse table"
+          src="/images/little-red-mailbox-story-spread-farmhouse-table.jpg"
+          alt="Little Red Mailbox story pages, watercolor illustration, word search activity, and red envelopes arranged on a farmhouse table"
           fill
           className="object-cover"
+          style={{ filter: "brightness(1.1) contrast(1.06) saturate(1.16) sepia(0.14) hue-rotate(-8deg)" }}
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-foreground/55" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-foreground/45 to-foreground/60" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-32">
