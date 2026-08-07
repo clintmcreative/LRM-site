@@ -11,7 +11,8 @@ function scrollToPricing(e: React.MouseEvent) {
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden pt-20">
+    // PROMO (Back-to-School 15% off): the pt-[calc(...)] adds the promo banner height on top of the header offset. Revert to pt-20 when the promo ends.
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden pt-[calc(5rem+var(--promo-banner-height,0px))]">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-child-letter.jpg"
@@ -377,8 +378,10 @@ export function FinalCTASection() {
 }
 
 // Stripe checkout links
-const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00"
-const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01"
+// PROMO (Back-to-School 15% off) — the `?prefilled_promo_code=BACKTOSCHOOL15` query params below
+// are temporary. When the promotion ends, restore these to the base links (remove the query string).
+const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00?prefilled_promo_code=BACKTOSCHOOL15"
+const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01?prefilled_promo_code=BACKTOSCHOOL15"
 
 function CheckIcon() {
   return (
@@ -452,12 +455,17 @@ export function PlanSelectionSection() {
                   ))}
                 </ul>
 
+                {/* PROMO (Back-to-School 15% off) — button label was "Join Monthly". Restore when promo ends. */}
                 <a
                   href={MONTHLY_STRIPE_LINK}
                   className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
-                  Join Monthly
+                  Join and Save 15%
                 </a>
+                {/* PROMO (Back-to-School 15% off) — remove this line when the promotion ends. */}
+                <p className="mt-3 text-center text-xs text-muted-foreground">
+                  Discount applied at checkout with code BACKTOSCHOOL15.
+                </p>
               </div>
             </div>
 
@@ -497,12 +505,17 @@ export function PlanSelectionSection() {
                   ))}
                 </ul>
 
+                {/* PROMO (Back-to-School 15% off) — button label was "Join Yearly". Restore when promo ends. */}
                 <a
                   href={YEARLY_STRIPE_LINK}
                   className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
                 >
-                  Join Yearly
+                  Join and Save 15%
                 </a>
+                {/* PROMO (Back-to-School 15% off) — remove this line when the promotion ends. */}
+                <p className="mt-3 text-center text-xs text-primary-foreground/80">
+                  Discount applied at checkout with code BACKTOSCHOOL15.
+                </p>
               </div>
             </div>
           </div>

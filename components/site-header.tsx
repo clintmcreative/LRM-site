@@ -20,7 +20,8 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    // PROMO (Back-to-School 15% off): top-[var(--promo-banner-height,0px)] lets the promo banner sit above the header. Revert to top-0 when the promo ends.
+    <header className="fixed top-[var(--promo-banner-height,0px)] left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <Mail className="h-6 w-6 text-primary" aria-hidden="true" />

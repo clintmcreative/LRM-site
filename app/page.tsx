@@ -1,6 +1,8 @@
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CTASection } from "@/components/cta-section"
+// PROMO (Back-to-School 15% off) — remove this import when the promotion ends.
+import { PromoBanner } from "@/components/promo-banner"
 import {
   HeroSection,
   HowItWorksSection,
@@ -14,6 +16,8 @@ import {
 export default function HomePage() {
   return (
     <>
+      {/* PROMO (Back-to-School 15% off) — remove this banner when the promotion ends. */}
+      <PromoBanner />
       <SiteHeader />
       <main>
         <HeroSection />
