@@ -15,7 +15,7 @@ import { useLayoutEffect, useRef } from "react"
    ============================================================ */
 
 export function PromoBanner() {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLAnchorElement>(null)
 
   useLayoutEffect(() => {
     const el = ref.current
@@ -48,16 +48,19 @@ export function PromoBanner() {
       aria-label="Back to school special: 15% off. Use code BACKTOSCHOOL15. Tap to shop plans."
       className="fixed inset-x-0 top-0 z-[60] block bg-primary text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
     >
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-1 px-4 py-2.5 text-center sm:flex-row sm:gap-3 sm:py-3">
-        <span className="font-serif text-base font-extrabold uppercase leading-none tracking-[0.12em] sm:text-lg">
+      <div
+        className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-1 px-4 py-2.5 text-center sm:flex-row sm:gap-3 sm:py-3"
+        style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+      >
+        <span className="text-base font-bold uppercase leading-none tracking-[0.12em] sm:text-lg">
           Back to School Special
         </span>
         <span className="hidden text-primary-foreground/40 sm:inline">|</span>
-        <span className="font-serif text-lg font-extrabold uppercase leading-none tracking-[0.12em] sm:text-xl">
+        <span className="text-lg font-bold uppercase leading-none tracking-[0.12em] sm:text-xl">
           15% Off
         </span>
       </div>
-      <p className="pb-2 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-primary-foreground/75 sm:pb-2.5">
+      <p className="pb-2 text-center font-serif text-xs italic tracking-wide text-primary-foreground/80 sm:pb-2.5">
         Use code BACKTOSCHOOL15
       </p>
     </a>
