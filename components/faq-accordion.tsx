@@ -44,7 +44,7 @@ function GiftAnswer() {
         Absolutely. Little Red Mailbox makes a meaningful gift for birthdays, holidays, grandchildren, or any child who would enjoy receiving real mail each month.
       </p>
       <p>
-        Simply choose either a monthly or yearly subscription and have it shipped directly to the child. Each month they will receive a new story, a hands on mission, and a small surprise in the mail.
+        Simply start a monthly subscription and have it shipped directly to the child. Each month they will receive a new story, a hands on mission, and a small surprise in the mail.
       </p>
       <p>Subscriptions can be canceled at any time.</p>
     </div>

@@ -35,7 +35,7 @@ export default function TermsPage() {
                 Subscriptions
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Subscriptions are billed on a recurring basis (monthly or yearly) unless canceled. By purchasing a subscription, you authorize us to charge your payment method on file at the selected billing interval.
+                Subscriptions are billed on a recurring monthly basis unless canceled. By purchasing a subscription, you authorize us to charge your payment method on file each month.
               </p>
 
               <h2 className="mt-10 font-serif text-2xl font-bold text-foreground">

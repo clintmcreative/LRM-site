@@ -381,7 +381,6 @@ export function FinalCTASection() {
 // PROMO (Back-to-School 15% off) — the `?prefilled_promo_code=BACKTOSCHOOL15` query params below
 // are temporary. When the promotion ends, restore these to the base links (remove the query string).
 const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00?prefilled_promo_code=BACKTOSCHOOL15"
-const YEARLY_STRIPE_LINK = "https://buy.stripe.com/14A7sLgoOdzy9QA5kxfIs01?prefilled_promo_code=BACKTOSCHOOL15"
 
 function CheckIcon() {
   return (
@@ -405,13 +404,6 @@ export function PlanSelectionSection() {
     "Cancel anytime",
   ]
 
-  const yearlyFeatures = [
-    "Everything in monthly",
-    "One simple payment for the year",
-    "Best value for families",
-    "Our most popular option",
-  ]
-
   return (
     <section id="pricing" className="scroll-mt-20 bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -421,13 +413,13 @@ export function PlanSelectionSection() {
               A Gift They{"'"}ll Actually Look Forward To
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              Choose monthly or yearly delivery for a curious kid in your life.
+              A monthly adventure delivered to a curious kid in your life.
             </p>
           </div>
         </SectionObserver>
 
         <SectionObserver>
-          <div className="mx-auto mt-12 grid max-w-3xl gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-12 max-w-xl">
             {/* Monthly Plan */}
             <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
               <div className="px-6 py-6 text-center">
@@ -464,56 +456,6 @@ export function PlanSelectionSection() {
                 </a>
                 {/* PROMO (Back-to-School 15% off) — remove this line when the promotion ends. */}
                 <p className="mt-3 text-center text-xs text-muted-foreground">
-                  Discount applied at checkout with code BACKTOSCHOOL15.
-                </p>
-              </div>
-            </div>
-
-            {/* Yearly Plan - Best Value */}
-            <div className="flex flex-col overflow-hidden rounded-xl border-2 border-primary bg-primary">
-              <div className="px-6 py-6 text-center">
-                <h3 className="font-serif text-2xl font-bold text-primary-foreground">
-                  Yearly
-                </h3>
-                <p className="mt-1 text-sm text-primary-foreground/80">
-                  Our Best Value
-                </p>
-              </div>
-              <div className="flex flex-1 flex-col px-6 py-6">
-                <div className="text-center">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-primary-foreground">$119</span>
-                    <span className="text-base text-primary-foreground/80">/ year</span>
-                  </div>
-                </div>
-
-                <ul className="mt-6 flex flex-1 flex-col gap-3">
-                  {yearlyFeatures.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg
-                        className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2.5}
-                        aria-hidden="true"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm text-primary-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* PROMO (Back-to-School 15% off) — button label was "Join Yearly". Restore when promo ends. */}
-                <a
-                  href={YEARLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary-foreground px-6 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
-                >
-                  Join and Save 15%
-                </a>
-                {/* PROMO (Back-to-School 15% off) — remove this line when the promotion ends. */}
-                <p className="mt-3 text-center text-xs text-primary-foreground/80">
                   Discount applied at checkout with code BACKTOSCHOOL15.
                 </p>
               </div>
