@@ -2,207 +2,56 @@
 
 import Image from "next/image"
 import { SectionObserver } from "@/components/section-observer"
-import { BookOpen, Compass, Gift, Heart, Sun, TreePine } from "lucide-react"
 
-function scrollToPricing(e: React.MouseEvent) {
+function openMailerLitePopup(e: React.MouseEvent) {
   e.preventDefault()
-  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" })
+  if (typeof window !== "undefined" && window.ml) {
+    window.ml("show", "gwYLVS", true)
+  }
 }
+
+const primaryButton = "inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+const lightButton = "inline-flex items-center justify-center rounded-lg border border-primary-foreground/40 px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
 
 export function HeroSection() {
   return (
-    // PROMO (Back-to-School 15% off): the pt-[calc(...)] adds the promo banner height on top of the header offset. Revert to pt-20 when the promo ends.
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden pt-[calc(5rem+var(--promo-banner-height,0px))]">
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden pt-20">
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-child-letter.jpg"
-          alt="A child opening a rustic envelope at a farmhouse table with warm sunlight"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-foreground/50" />
+        <Image src="/images/hero-child-letter.jpg" alt="A child opening a letter at a warm farmhouse table" fill className="object-cover" priority sizes="100vw" />
+        <div className="absolute inset-0 bg-foreground/55" />
       </div>
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-32">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20 md:py-32">
         <div className="max-w-2xl">
-          <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl text-balance">
-            Childhood Shouldn{"'"}t Happen on a Screen.
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-            Every month, your child receives <strong className="font-semibold">an original story</strong> written just for Little Red Mailbox, <strong className="font-semibold">a hands-on mission</strong> that brings it to life, and <strong className="font-semibold">a small surprise</strong> tucked inside every envelope.
-          </p>
-          <p className="mt-4 text-lg font-bold text-primary-foreground md:text-xl">
-            Because kids still love getting mail.
-          </p>
-          <div className="mt-8">
-            <button
-              onClick={scrollToPricing}
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Join the Club
-            </button>
-            <p className="mt-3 text-sm text-primary-foreground/70">
-              Ships monthly. Cancel anytime.
-            </p>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/85">A New Chapter for Little Red Mailbox</span>
+          <h1 className="mt-5 font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl text-balance">The stories aren&apos;t over.</h1>
+          <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">Little Red Mailbox began by bringing original stories and hands-on adventures to kids through the mail. We&apos;ve wrapped up the monthly subscription, but we&apos;re not finished telling stories.</p>
+          <p className="mt-4 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">We&apos;re working on what comes next, and we&apos;d love to have you along for it.</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button onClick={openMailerLitePopup} className={primaryButton}>Keep Me Posted</button>
+            <a href="#free-story" className={lightButton}>Read a Free Story</a>
           </div>
+          <p className="mt-4 max-w-lg text-sm leading-relaxed text-primary-foreground/75">Join the list and we&apos;ll send you one of our original stories while keeping you posted on what comes next.</p>
         </div>
       </div>
     </section>
   )
 }
 
-export function FarmMindsetSection() {
+export function OurStorySection() {
   return (
-    <section className="bg-card py-16 md:py-24">
+    <section id="our-stories" className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              Rooted in the Farm Mindset
-            </h2>
-            <div className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
-              <p>The Little Red Mailbox is inspired by the mindset of farm life:</p>
-              <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {["Stewardship", "Responsibility", "Patience", "Grit", "Gratitude", "Resourcefulness", "Courage"].map(
-                  (value) => (
-                    <div
-                      key={value}
-                      className="rounded-lg border border-border bg-background px-4 py-3"
-                    >
-                      <span className="font-serif text-sm font-bold text-foreground">
-                        {value}
-                      </span>
-                    </div>
-                  )
-                )}
-              </div>
-              <p className="mt-6">These aren{"'"}t taught as lessons.</p>
-              <p className="mt-2">They{"'"}re experienced through stories, challenges, and adventure.</p>
-              <p className="mt-4 font-serif font-semibold text-foreground">Farm isn{"'"}t a place — it{"'"}s a mindset.</p>
-              <p className="mt-2">And every kid can grow it.</p>
-            </div>
-          </div>
-        </SectionObserver>
-      </div>
-    </section>
-  )
-}
-
-export function TransformationSection() {
-  return (
-    <section className="bg-secondary/50 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionObserver>
-          <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg md:w-1/2">
-              <Image
-                src="/images/kids-running-mailbox.jpg"
-                alt="Two children in overalls running toward a red mailbox on a rural path"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-            <div className="md:w-1/2">
-              <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                Something Real to Look Forward To
-              </span>
-              <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-                Little Red Mailbox helps families reclaim small moments that matter.
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Kids don{"'"}t just need less screen time. They need something better to take its place. Something slower, more meaningful, and real.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Your child begins to:
-              </p>
-              <ul className="mt-4 flex flex-col gap-2 text-base leading-relaxed text-muted-foreground md:text-lg">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Look forward to checking the mailbox
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Get pulled into original stories
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Bring the story to life through simple hands-on missions
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Talk with their family about what they discovered
-                </li>
-              </ul>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Little Red Mailbox gives families one meaningful moment they can count on every month. Each envelope invites kids to slow down, imagine, use their hands, and discover something new.
-              </p>
-            </div>
-          </div>
-        </SectionObserver>
-      </div>
-    </section>
-  )
-}
-
-export function WhatsInsideSection() {
-  return (
-    <section className="bg-card py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Open the Envelope
-            </span>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              See What Arrives in the Mailbox
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              A complete screen-free adventure, delivered in a real envelope with your child{"'"}s name on it.
-            </p>
-          </div>
-        </SectionObserver>
-
-        <SectionObserver>
-          <div className="mt-12 flex flex-col items-center">
-            <div className="relative aspect-[4/3] w-full max-w-4xl overflow-hidden rounded-lg">
-              <Image
-                src="/images/product-envelope-contents.jpg"
-                alt="Little Red Mailbox envelope with an original story, hands-on mission, and small surprise"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 896px) 896px, 100vw"
-              />
-            </div>
-            <div className="mt-12 grid w-full gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <BookOpen className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Short Story</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  An original story written exclusively for Little Red Mailbox, inspired by farm life, curiosity, and meaningful adventure.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-accent/10">
-                  <Compass className="h-7 w-7 text-accent" />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Mission</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  A simple hands-on mission that brings the story to life through real-world exploration, creativity, and discovery.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center sm:col-span-2 md:col-span-1">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-secondary">
-                  <Gift className="h-7 w-7 text-secondary-foreground" />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-foreground">A Small Surprise Inside</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  A small surprise tucked inside every envelope that adds one more reason to smile when the mailbox opens.
-                </p>
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg"><Image src="/images/letter-contents.jpg" alt="Little Red Mailbox letters and story pages on a wooden table" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" /></div>
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-primary">Our Story</span>
+              <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">Little Red Mailbox began with a simple idea.</h2>
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                <p>Kids still love getting lost in a good story. They still love discovering something made just for them, using their imagination and having something real to look forward to.</p>
+                <p>Little Red Mailbox brought those ideas together through original stories sent to kids in the mail. Each one encouraged children to read, imagine, explore and carry a little bit of the story back into the real world.</p>
+                <p>The monthly letters have come to an end, but that idea hasn&apos;t.</p>
+                <p>We&apos;re taking the stories, values and imagination behind Little Red Mailbox into whatever comes next.</p>
               </div>
             </div>
           </div>
@@ -212,50 +61,14 @@ export function WhatsInsideSection() {
   )
 }
 
-export function BenefitsSection() {
+export function ScreenFreeSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              For Parents
-            </span>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
-              Why parents love Little Red Mailbox.
-            </h2>
-          </div>
-        </SectionObserver>
-
-        <SectionObserver>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border border-border bg-card p-8 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                <Sun className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Off the screen, into the world.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Give your child something they can hold in their hands. Real paper, real stories, real adventures. No batteries. No logins. No noise.
-              </p>
-            </div>
-            <div className="rounded-lg border border-border bg-card p-8 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
-                <TreePine className="h-7 w-7 text-accent" />
-              </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Capable Kids Grow Through Experience.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Farm life has always taught patience, responsibility, curiosity, and resourcefulness—not through lectures, but through everyday life. Little Red Mailbox follows that same philosophy, helping kids grow through stories they experience, not lessons they{"'"}re told.
-              </p>
-            </div>
-            <div className="rounded-lg border border-border bg-card p-8 text-center sm:col-span-2 lg:col-span-1">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
-                <Heart className="h-7 w-7 text-secondary-foreground" />
-              </div>
-              <h3 className="mt-5 font-serif text-lg font-bold text-foreground">Conversations you{"'"}ve been missing.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Every mission gives families one more reason to talk, laugh, wonder, and discover something together long after the story ends.
-              </p>
-            </div>
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+            <div className="order-2 md:order-1"><span className="text-xs font-semibold uppercase tracking-widest text-primary">Childhood Beyond the Screen</span><h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">Childhood Shouldn&apos;t Happen on a Screen.</h2><div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg"><p>Kids don&apos;t just need less screen time. They need something better to take its place.</p><p>A good story gives them somewhere to go in their imagination, but the best ones don&apos;t end on the page. They make kids curious. They give them something to talk about. Sometimes they send them outside to look a little closer at the world around them.</p><p>That&apos;s the kind of childhood Little Red Mailbox has always wanted to encourage.</p></div></div>
+            <div className="relative order-1 aspect-[3/4] overflow-hidden rounded-lg md:order-2"><Image src="/images/kids-reading-letter.jpg" alt="Children reading a Little Red Mailbox letter outdoors" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" /></div>
           </div>
         </SectionObserver>
       </div>
@@ -263,206 +76,54 @@ export function BenefitsSection() {
   )
 }
 
-export function HowItWorksSection() {
+export function FarmSection() {
   return (
-    <section className="bg-card py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              How It Works
-            </span>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl">
-              How Little Red Mailbox Works
-            </h2>
-          </div>
-        </SectionObserver>
+    <section id="why-the-farm" className="relative overflow-hidden py-16 md:py-24"><div className="absolute inset-0"><Image src="/images/red-barn.jpg" alt="Red barn in a golden field at sunset" fill className="object-cover" sizes="100vw" /><div className="absolute inset-0 bg-foreground/60" /></div><div className="relative z-10 mx-auto max-w-6xl px-6"><SectionObserver><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/80">Why the Farm</span><h2 className="mt-4 font-serif text-3xl font-bold text-primary-foreground md:text-4xl">Why Our Stories Begin on the Farm</h2><div className="mx-auto mt-6 space-y-4 text-base leading-relaxed text-primary-foreground/90 md:text-lg"><p>Long before screens filled our homes, farms helped shape capable kids.</p><p>A farm teaches lessons that can&apos;t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told.</p><p>You don&apos;t have to live on a farm to learn those lessons.</p><p>That&apos;s why the farm has always been the starting place for Little Red Mailbox stories. Not because every child needs to grow up in the country, but because patience, resourcefulness, responsibility, curiosity and wonder belong everywhere.</p><p className="pt-2 font-serif text-xl text-primary-foreground">Because childhood doesn&apos;t need more noise. It needs more moments that grow something.</p></div></div></SectionObserver></div></section>
+  )
+}
 
-        <SectionObserver>
-          <div className="mt-12 grid items-center gap-10 md:grid-cols-2 md:gap-16">
-            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
-              <Image
-                src="/images/hand-holding-envelope-stamped.png"
-                alt="Hand holding a Little Red Mailbox envelope with a Forever stamp"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-            <div className="flex flex-col gap-8">
-              <div className="flex gap-5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="font-serif text-2xl font-bold">1</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">Join Little Red Mailbox</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Subscribe in under a minute.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="font-serif text-2xl font-bold">2</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">Check the Mailbox</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    An original story, a hands-on mission, and a small surprise arrive each month.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="font-serif text-2xl font-bold">3</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">Read. Imagine. Discover.</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Every envelope invites kids to slow down, explore, and try something new.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SectionObserver>
-      </div>
-    </section>
+export function OriginalStoriesSection() {
+  return (
+    <section id="stories" className="bg-card py-16 md:py-24"><div className="mx-auto max-w-6xl px-6"><SectionObserver><div className="grid items-center gap-10 md:grid-cols-2 md:gap-16"><div className="relative aspect-[4/3] overflow-hidden rounded-lg"><Image src="/images/product-envelope-contents.jpg" alt="Original Little Red Mailbox story pages and hands-on adventure materials" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" /></div><div><span className="text-xs font-semibold uppercase tracking-widest text-primary">Original Little Red Mailbox Stories</span><h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">Stories made to leave the page.</h2><div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg"><p>Little Red Mailbox stories were created to be read, imagined and carried into the real world. They&apos;re grounded in farm life, nature, family, curiosity and the kind of adventures kids can picture themselves stepping into.</p><p>The lessons are part of the story rather than lectures added afterward. Kids meet characters who have to notice things, solve problems, be patient, take responsibility and figure out what to do next.</p><p>That same approach will continue to shape whatever Little Red Mailbox becomes next.</p></div></div></div></SectionObserver></div></section>
+  )
+}
+
+export function FreeStorySection() {
+  return (
+    <section id="free-story" className="py-16 md:py-24"><div className="mx-auto max-w-6xl px-6"><SectionObserver><div className="grid items-center gap-10 md:grid-cols-2 md:gap-16"><div><span className="text-xs font-semibold uppercase tracking-widest text-primary">Start With a Story</span><h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">Read an Original Little Red Mailbox Story</h2><p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">Curious what a Little Red Mailbox story feels like?</p><p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">We&apos;ll send you one of our original adventures free. You&apos;ll also be the first to hear what we&apos;re creating next.</p><div className="mt-8"><button onClick={openMailerLitePopup} className={primaryButton}>Get the Free Story</button><p className="mt-3 text-sm leading-relaxed text-muted-foreground">We&apos;ll send the story to your inbox and keep you posted on Little Red Mailbox from time to time.</p></div></div><div className="relative aspect-[4/3] overflow-hidden rounded-lg"><Image src="/images/little-red-mailbox-story-spread-farmhouse-table.jpg" alt="Original Little Red Mailbox story pages and envelopes on a farmhouse table" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" /></div></div></SectionObserver></div></section>
   )
 }
 
 export function FinalCTASection() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/red-barn.jpg"
-          alt="A red barn in a golden wheat field at sunset"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-foreground/60" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl text-balance">
-              Why Our Stories Begin on the Farm
-            </h2>
-            <div className="mx-auto mt-6 max-w-[780px] text-base leading-relaxed text-primary-foreground/85 md:text-lg">
-              <p>
-                Long before screens filled our homes, farms helped shape capable kids.
-              </p>
-              <p className="mt-4">
-                A farm teaches lessons that can{"'"}t be rushed. Seeds take time. Animals depend on people. Hard work matters. Curiosity is rewarded. Responsibility grows through doing, not being told. You don{"'"}t have to live on a farm to learn those lessons.
-              </p>
-              <p className="mt-4">
-                Because childhood doesn{"'"}t need more noise. It needs more moments that grow something.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <button
-                onClick={scrollToPricing}
-                className="inline-flex items-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
-              >
-                Join the Club
-              </button>
-            </div>
-          </div>
-        </SectionObserver>
-      </div>
-    </section>
+    <section className="relative overflow-hidden py-16 md:py-24"><div className="absolute inset-0"><Image src="/images/hero-child-letter.jpg" alt="Child reading a Little Red Mailbox story" fill className="object-cover" sizes="100vw" /><div className="absolute inset-0 bg-foreground/65" /></div><div className="relative z-10 mx-auto max-w-6xl px-6"><SectionObserver><div className="mx-auto max-w-2xl text-center"><span className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/80">What&apos;s Next</span><h2 className="mt-4 font-serif text-3xl font-bold text-primary-foreground md:text-4xl">We&apos;re turning the page.</h2><p className="mt-6 text-base leading-relaxed text-primary-foreground/90 md:text-lg">The monthly letters may be finished, but Little Red Mailbox isn&apos;t.</p><p className="mt-4 text-base leading-relaxed text-primary-foreground/90 md:text-lg">We&apos;re working on new ways to bring these stories to kids and families. We&apos;re not quite ready to share everything yet, but when we are, our email list will hear about it first.</p><div className="mt-8"><button onClick={openMailerLitePopup} className={lightButton}>Follow What&apos;s Next</button><p className="mt-3 text-sm text-primary-foreground/75">We&apos;ll send you a free Little Red Mailbox story when you join the list.</p></div></div></SectionObserver></div></section>
   )
 }
 
-// Stripe checkout links
-// PROMO (Back-to-School 15% off) — the `?prefilled_promo_code=BACKTOSCHOOL15` query params below
-// are temporary. When the promotion ends, restore these to the base links (remove the query string).
-const MONTHLY_STRIPE_LINK = "https://buy.stripe.com/bJe28r0pQ2UU7Is3cpfIs00?prefilled_promo_code=BACKTOSCHOOL15"
+export function HowItWorksSection() {
+  return <OriginalStoriesSection />
+}
 
-function CheckIcon() {
-  return (
-    <svg
-      className="mt-0.5 h-5 w-5 shrink-0 text-accent"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2.5}
-      aria-hidden="true"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
-  )
+export function TransformationSection() {
+  return <ScreenFreeSection />
+}
+
+export function WhatsInsideSection() {
+  return <OriginalStoriesSection />
+}
+
+export function BenefitsSection() {
+  return <OurStorySection />
 }
 
 export function PlanSelectionSection() {
-  const monthlyFeatures = [
-    "Original story each month",
-    "Hands-on mission or activity",
-    "Cancel anytime",
-  ]
+  return null
+}
 
-  return (
-    <section id="pricing" className="scroll-mt-20 bg-card py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionObserver>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-              A Gift They{"'"}ll Actually Look Forward To
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground">
-              A monthly adventure delivered to a curious kid in your life.
-            </p>
-          </div>
-        </SectionObserver>
+export function FarmMindsetSection() {
+  return <FarmSection />
+}
 
-        <SectionObserver>
-          <div className="mx-auto mt-12 max-w-xl">
-            {/* Monthly Plan */}
-            <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
-              <div className="px-6 py-6 text-center">
-                <h3 className="font-serif text-2xl font-bold text-foreground">
-                  Monthly
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Welcome to the Club.
-                </p>
-              </div>
-              <div className="flex flex-1 flex-col px-6 py-6">
-                <div className="text-center">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-foreground">$10.99</span>
-                    <span className="text-base text-muted-foreground">/ month</span>
-                  </div>
-                </div>
-
-                <ul className="mt-6 flex flex-1 flex-col gap-3">
-                  {monthlyFeatures.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckIcon />
-                      <span className="text-sm text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* PROMO (Back-to-School 15% off) — button label was "Join Monthly". Restore when promo ends. */}
-                <a
-                  href={MONTHLY_STRIPE_LINK}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  Join and Save 15%
-                </a>
-                {/* PROMO (Back-to-School 15% off) — remove this line when the promotion ends. */}
-                <p className="mt-3 text-center text-xs text-muted-foreground">
-                  Discount applied at checkout with code BACKTOSCHOOL15.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SectionObserver>
-      </div >
-    </section >
-  )
+export function CTASection() {
+  return null
 }

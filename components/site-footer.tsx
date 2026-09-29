@@ -10,7 +10,7 @@ export function SiteFooter() {
               Little Red Mailbox
             </Link>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Little Red Mailbox helps parents give kids a screen-free monthly adventure through stories and hands-on missions delivered right to the mailbox.
+              Little Red Mailbox creates thoughtful, screen-free stories and adventures for kids and families.
             </p>
           </div>
 
