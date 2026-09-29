@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { FAQAccordion } from "@/components/faq-accordion"
@@ -8,96 +7,18 @@ import { FAQFinalCTA } from "@/components/faq-final-cta"
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Little Red Mailbox",
-  description:
-    "Find answers to common questions about Little Red Mailbox subscription, shipping, cancellation, and more.",
+  description: "Find answers about Little Red Mailbox stories, the end of the monthly letters, and what comes next.",
 }
 
 const faqs = [
-  {
-    question: "When do letters ship?",
-    answer:
-      "Letters ship during the first week of each month. Once your subscription is active, your child's first letter will go out with the next monthly batch. Most families receive their letter within 5–7 business days after shipping, depending on location.",
-  },
-  {
-    question: "What age is this for?",
-    answer: "age_special",
-  },
-  {
-    question: "What are the stories about?",
-    answer:
-      "Little Red Mailbox stories are standalone adventures rooted in real life, curiosity, and meaningful work. Each envelope includes a short story, a simple hands on mission, and a small surprise tied to the experience. The stories are inspired by farm life, the outdoors, old fashioned problem solving, and the kind of moments that help kids grow capable and curious. Some children read them independently while others enjoy them as a family read aloud.",
-  },
-  {
-    question: "What comes inside each envelope?",
-    answer:
-      "Every envelope includes three things: a short standalone story, a simple hands on mission or activity, and a small surprise tied to the experience. The story draws kids into meaningful adventures, the mission encourages real world curiosity and action, and the surprise adds a little extra excitement to the mailbox moment.",
-  },
-  {
-    question: "How do I cancel?",
-    answer:
-      "cancel_special",
-  },
-  {
-    question: "Can this be given as a gift?",
-    answer:
-      "gift_special",
-  },
-  {
-    question: "How often do letters arrive?",
-    answer:
-      "Letters arrive once per month, every month, for as long as your subscription is active. We believe in the power of anticipation -- part of the magic is waiting for that next envelope to appear in the mailbox.",
-  },
-  {
-    question: "What if my child doesn't like reading?",
-    answer:
-      "That's actually one of the best reasons to try Little Red Mailbox. Our stories are short, engaging, and designed to hook even reluctant readers. The physical experience of receiving real mail, opening an envelope, and finding a surprise inside creates excitement that naturally draws children into the story.",
-  },
-  {
-    question: "Do you ship internationally?",
-    answer:
-      "Currently, we ship within the United States. International shipping is something we're working toward. If you're outside the US and interested, send us an email and we'll let you know when we expand.",
-  },
+  { question: "What happened to the monthly letters?", answer: "The monthly Little Red Mailbox subscription has ended. The stories and the ideas behind them have not. We are working on new ways to bring those stories to kids and families." },
+  { question: "What are the stories about?", answer: "Little Red Mailbox stories are original adventures rooted in real life, curiosity, meaningful work, farm life and the outdoors. They invite kids to notice things, solve problems, be patient and carry the story into the real world." },
+  { question: "What age are the stories for?", answer: "The stories were designed primarily for children ages 7 to 10, though younger children may enjoy them read aloud and older children may enjoy them independently." },
+  { question: "Will there be something new from Little Red Mailbox?", answer: "We are exploring new ways to bring our stories to families. We are not ready to share the details yet, but our email list will hear what comes next first." },
+  { question: "How can I receive an original story?", answer: "Join the Little Red Mailbox email list through any of the story or follow-up buttons on the site. The existing MailerLite signup sends one of our original stories and keeps you posted from time to time." },
+  { question: "How can I contact you?", answer: "You can reach us at hello@littleredmailboxclub.com and we will be glad to help." },
 ]
 
 export default function FAQPage() {
-  return (
-    <>
-      <SiteHeader />
-      <main>
-        {/* Hero */}
-        <section className="bg-card pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="mx-auto max-w-3xl px-6 text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Questions & Answers
-            </span>
-            <h1 className="mt-4 font-serif text-4xl font-bold text-foreground md:text-5xl text-balance">
-              Frequently Asked Questions
-            </h1>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Everything you need to know about Little Red Mailbox. Can{"'"}t find what you{"'"}re looking for? Reach out to us at{" "}
-              <a
-                href="mailto:hello@littleredmailboxclub.com"
-                className="text-primary underline underline-offset-2 hover:text-primary/80"
-              >
-                hello@littleredmailboxclub.com
-              </a>
-            </p>
-          </div>
-        </section>
-
-        {/* FAQ List */}
-        <section className="py-12 md:py-20">
-          <div className="mx-auto max-w-3xl px-6">
-            <SectionObserver>
-              <FAQAccordion items={faqs} />
-            </SectionObserver>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <FAQFinalCTA />
-      </main>
-      <SiteFooter />
-    </>
-  )
+  return <><SiteHeader /><main><section className="bg-card pb-16 pt-28 md:pb-20 md:pt-36"><div className="mx-auto max-w-3xl px-6 text-center"><span className="text-xs font-semibold uppercase tracking-widest text-primary">Questions & Answers</span><h1 className="mt-4 font-serif text-4xl font-bold text-foreground md:text-5xl">Frequently Asked Questions</h1><p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">Everything you need to know about Little Red Mailbox. Can&apos;t find what you&apos;re looking for? Reach out at <a href="mailto:hello@littleredmailboxclub.com" className="text-primary underline underline-offset-2">hello@littleredmailboxclub.com</a>.</p></div></section><section className="py-12 md:py-20"><div className="mx-auto max-w-3xl px-6"><SectionObserver><FAQAccordion items={faqs} /></SectionObserver></div></section><FAQFinalCTA /></main><SiteFooter /></>
 }

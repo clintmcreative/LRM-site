@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import { SectionObserver } from "@/components/section-observer"
 
 declare global {
@@ -17,17 +16,7 @@ function openMailerLitePopup(e: React.MouseEvent) {
   }
 }
 
-function scrollToPricing(router: ReturnType<typeof useRouter>) {
-  return (e: React.MouseEvent) => {
-    e.preventDefault()
-    router.push("/#pricing")
-  }
-}
-
-
 export function FreeLetterHero() {
-  const router = useRouter()
-
   return (
     <section id="top" className="relative flex min-h-[85vh] items-center overflow-hidden pt-20">
       <div className="absolute inset-0">
@@ -61,17 +50,9 @@ export function FreeLetterHero() {
             </button>
           </div>
 
-          <div className="mt-8 border-t border-primary-foreground/15 pt-6">
-            <p className="text-sm text-primary-foreground/80">
-              Kids love getting mail. Ready to start?
-            </p>
-            <button
-              onClick={scrollToPricing(router)}
-              className="mt-3 inline-flex items-center rounded-lg border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-            >
-              Start My Subscription
-            </button>
-          </div>
+          <p className="mt-8 border-t border-primary-foreground/15 pt-6 text-sm leading-relaxed text-primary-foreground/80">
+            Join the list and we&apos;ll send the story to your inbox while keeping you posted on what comes next.
+          </p>
         </div>
       </div>
     </section>
@@ -79,8 +60,6 @@ export function FreeLetterHero() {
 }
 
 export function WhatYoullGet() {
-  const router = useRouter()
-
   return (
     <section className="bg-card py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -92,9 +71,9 @@ export function WhatYoullGet() {
             <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
               Start With a Free Sample Letter
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              See exactly what a Little Red Mailbox story feels like before joining.
-            </p>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Curious what a Little Red Mailbox story feels like? We&apos;ll send you an original adventure free through our existing email list.
+              </p>
           </div>
         </SectionObserver>
 
@@ -112,18 +91,7 @@ export function WhatYoullGet() {
                 Get the Free Sample Letter
               </button>
             </div>
-            <div className="flex flex-col rounded-lg border border-border bg-background p-8 text-center">
-              <h3 className="font-serif text-lg font-bold text-foreground">Skip the Preview — Start My Subscription</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                Get your first story delivered to your mailbox and begin the adventure right away.
-              </p>
-              <button
-                onClick={scrollToPricing(router)}
-                className="mt-6 inline-flex items-center justify-center rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-              >
-                Start My Subscription
-              </button>
-            </div>
+
           </div>
         </SectionObserver>
       </div>
@@ -132,8 +100,6 @@ export function WhatYoullGet() {
 }
 
 export function WhyFamiliesLoveIt() {
-  const router = useRouter()
-
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -185,12 +151,7 @@ export function WhyFamiliesLoveIt() {
                 >
                   Get the Free Letter
                 </button>
-                <button
-                  onClick={scrollToPricing(router)}
-                  className="inline-flex items-center rounded-lg border-2 border-primary bg-transparent px-8 py-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10"
-                >
-                  Start My Subscription
-                </button>
+
               </div>
             </div>
           </div>

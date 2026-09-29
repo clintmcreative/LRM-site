@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Lora, Source_Sans_3, Montserrat } from 'next/font/google'
+import { Lora, Source_Sans_3 } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
@@ -16,18 +16,10 @@ const _sourceSans = Source_Sans_3({
   display: 'swap',
 })
 
-// PROMO (Back-to-School 15% off) — Montserrat is used only by the temporary promo banner. Remove when the promo ends.
-const _montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
-  title: 'Little Red Mailbox | Screen-Free Adventure Letters for Kids',
+  title: 'Little Red Mailbox | Stories for Curious Kids',
   description:
-    'Little Red Mailbox helps parents give kids a screen-free monthly adventure through stories and hands-on missions delivered right to the mailbox. For ages 7-10.',
+    'Little Red Mailbox creates thoughtful stories and screen-free adventures for kids and families. Follow along for what comes next.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -61,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${_lora.variable} ${_sourceSans.variable} ${_montserrat.variable}`}>
+    <html lang="en" className={`${_lora.variable} ${_sourceSans.variable}`} >
       <GoogleTagManager gtmId="GTM-KGBX8KLR" />
       <head>
         {/* MailerLite universal script */}

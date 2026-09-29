@@ -7,7 +7,6 @@ import {
   WhyFamiliesLoveIt,
   FarmMindsetPhilosophy,
 } from "@/components/free-letter-sections"
-import { CTASection } from "@/components/cta-section"
 import { FreeLetterCTA } from "@/components/free-letter-cta"
 
 export const metadata: Metadata = {
