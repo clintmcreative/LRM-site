@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { question: "What happened to the monthly letters?", answer: "The monthly Little Red Mailbox subscription has ended. The stories and the ideas behind them have not. We are working on new ways to bring those stories to kids and families." },
+  { question: "What happened to the monthly letters?", answer: "The monthly Little Red Mailbox subscription has ended, but the stories and the ideas behind them are continuing. Little Red Mailbox is moving into a new chapter built around the same kind of thoughtful, grounded stories families came to know through the letters." },
   { question: "What are the stories about?", answer: "Little Red Mailbox stories are original adventures rooted in real life, curiosity, meaningful work, farm life and the outdoors. They invite kids to notice things, solve problems, be patient and carry the story into the real world." },
   { question: "What age are the stories for?", answer: "The stories were designed primarily for children ages 7 to 10, though younger children may enjoy them read aloud and older children may enjoy them independently." },
-  { question: "Will there be something new from Little Red Mailbox?", answer: "We are exploring new ways to bring our stories to families. We are not ready to share the details yet, but our email list will hear what comes next first." },
-  { question: "How can I receive an original story?", answer: "Join the Little Red Mailbox email list through any of the story or follow-up buttons on the site. The existing MailerLite signup sends one of our original stories and keeps you posted from time to time." },
+  { question: "What's next for Little Red Mailbox?", answer: "Little Red Mailbox is moving into a new chapter centered on the same original stories, farm-inspired values and real-world imagination that shaped the letters. We'll share more with our email list first." },
+  { question: "How can I receive an original story?", answer: "Join the Little Red Mailbox email list through any of the story or follow-up buttons on the site. When you join the email list, we'll send you one of our original stories and keep you posted on the next chapter of Little Red Mailbox." },
   { question: "How can I contact you?", answer: "You can reach us at hello@littleredmailboxclub.com and we will be glad to help." },
 ]
 

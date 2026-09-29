@@ -26,12 +26,6 @@ export function SiteFooter() {
                 Home
               </Link>
               <Link
-                href="/free-letter"
-                className="text-sm text-foreground transition-colors hover:text-primary"
-              >
-                Free Letter
-              </Link>
-              <Link
                 href="/faq"
                 className="text-sm text-foreground transition-colors hover:text-primary"
               >
